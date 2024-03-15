@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. 实验目的 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>7. 实验目的 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -20,9 +20,7 @@
         <script src="../_static/js/baidu-tongji.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Lab2：协议栈之Eth协议实现" href="../lab2/index.html" />
-    <link rel="prev" title="Lab1：VLAN 与接口模式配置" href="index.html" /> 
+    <link rel="search" title="搜索" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,7 +28,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -41,61 +39,16 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">实验</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../lab0/index.html">计算机网络实验概述</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Lab1：VLAN 与接口模式配置</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 实验目的</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2. 实验任务</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">3. 实验原理</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#vlan">3.1. VLAN概要</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">3.2. VLAN帧格式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">3.3. VLAN端口的分类</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#access">3.3.1. Access端口</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#trunk">3.3.2. Trunk端口</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">4. 实验环境与分组</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">5. 实验组网</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">6. 实验步骤</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id9">6.1. 搭建网络拓扑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vlan2">6.2. 进入交换机配置vlan2添加相应接口</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#swtich0">6.2.1. 进入Swtich0的用户模式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch0vlan-2">6.2.2. 配置Switch0的VLAN 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch0vlan">6.2.3. 观察配置Switch0的VLAN信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch1vlan-2">6.2.4. 配置Switch1的VLAN 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch1vlan">6.2.5. 观察Switch1的VLAN信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ip">6.2.6. 设置计算机的IP地址</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#vlanvlan">6.2.7. 观察同一VLAN和不同VLAN的连通情况</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#vlan3ip">6.3. 进入交换机配置vlan3接口ip并观察连通性</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#switch0vlan-3">6.3.1. 配置Switch0的VLAN 3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">6.3.2. 观察Switch0的VLAN信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch1vlan-3">6.3.3. 配置Switch1的VLAN 3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">6.3.4. 观察Switch1的VLAN信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#vlan-3">6.3.5. 观察同一VLAN 3的连通情况</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">6.4. 配置接口trunk模式并验证连通性</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#switch0switch1trunk">6.4.1. 配置Switch0和Switch1的trunk端口</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">6.4.2. 观察VLAN 3的连通情况</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">6.4.3. 观察同一VLAN和不同VLAN的连通情况</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id15">7. 实验提交</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Lab1：VLAN 与接口模式配置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab2/index.html">Lab2：协议栈之Eth协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab3/index.html">Lab3：协议栈之ARP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab8/index.html">Lab4：RIP路由配置及协议分析</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -103,11 +56,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -116,7 +69,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -124,8 +77,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Lab1：VLAN 与接口模式配置</a> &raquo;</li>
-      <li><span class="section-number">1. </span>实验目的</li>
+      <li><span class="section-number">7. </span>实验目的</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/lab4/1cisco.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -136,7 +88,7 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1><span class="section-number">1. </span>实验目的<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
+<h1>实验目的<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
 <ol class="arabic simple">
 <li><p>了解VLAN（虚拟局域网）的作用；</p></li>
 <li><p>掌握跨交换机的VLAN的配置方法；</p></li>
@@ -145,13 +97,13 @@
 </ol>
 </section>
 <section id="id2">
-<h1><span class="section-number">2. </span>实验任务<a class="headerlink" href="#id2" title="永久链接至标题"></a></h1>
+<h1>实验任务<a class="headerlink" href="#id2" title="永久链接至标题"></a></h1>
 <p>本实验模拟某公司网络场景。该公司规模较大，内部放置了两台接入交换机（SW2和SW3）负责员工的网络接入，而且在交换机上划分不同VLAN来隔离广播域。由于员工较多，相同部分的员工通过不同交换机接入。为了保证在不同交换机下相同部门的员工能相互通信，需要配置交换机之间的链路为干道（trunk）模式，以实现相同VLAN跨交换机通信。</p>
 </section>
 <section id="id3">
-<h1><span class="section-number">3. </span>实验原理<a class="headerlink" href="#id3" title="永久链接至标题"></a></h1>
+<h1>实验原理<a class="headerlink" href="#id3" title="永久链接至标题"></a></h1>
 <section id="vlan">
-<h2><span class="section-number">3.1. </span>VLAN概要<a class="headerlink" href="#vlan" title="永久链接至标题"></a></h2>
+<h2>VLAN概要<a class="headerlink" href="#vlan" title="永久链接至标题"></a></h2>
 <p>由一台或多台交换机/集线器所组成的1个广播域称为扁平网络（flat network）。相互连接的硬件会接收有网络发来的广播帧。因此，随着连接硬件数量的增加，广播数据也会增加，网络状况也就越发混杂。为了减少广播数据，可以采用将整个扁平网络进行逻辑分段的VLAN（Virtual LAN）技术——一种专门为隔离二层广播报文设计的虚拟局域网技术。在一个VLAN中使用同一个广播域，不同的VLAN用户属于不同的广播域，它不能接收来
 自于不同VLAN用户的广播报文，因此可以有效地控制该域内广播通信的规模。</p>
 <img alt="../_images/VLAN广播域.png" src="../_images/VLAN广播域.png" />
@@ -161,7 +113,7 @@
 </div>
 </section>
 <section id="id4">
-<h2><span class="section-number">3.2. </span>VLAN帧格式<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>VLAN帧格式<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
 <p>当某个VLAN需要跨越多个交换机通信时，一般会使用 <strong>中继端口（trunk port）</strong> 的VLAN标签（tag VLAN）。IEEE 802.1Q标准规定在原有的标准以太网帧格式上增加一个特殊的标志域——tag域，用于表示数据帧所属的VLAN ID，带有VLAN标签的数据包可以通过中继端口完成以太网数据帧的收发。</p>
 <img alt="../_images/VLAN帧.png" src="../_images/VLAN帧.png" />
 <p>在以太网中，TPID的值为0x8100。如果该值不是0x8100，那么该域则不是表示TPID信息，而是被当作“长度/类型”数据域被识别。</p>
@@ -174,11 +126,11 @@
 <img alt="../_images/VLAN转发.png" src="../_images/VLAN转发.png" />
 </section>
 <section id="id5">
-<h2><span class="section-number">3.3. </span>VLAN端口的分类<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<h2>VLAN端口的分类<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
 <p>根据端口对 VLAN 数据帧的处理方式，cisco交换机的端口分为 Access端口和Trunk端口两类。每一个交换机的端口（无论是Access端口还是Trunk端口）都配置有缺省VLAN ID（PVID，Port default VLAN ID）， 一般默认的PVID等于1，即属于VLAN 1，也可以人为设置PVID。</p>
 <p>一个VLAN帧可能带有Tag（称为Tagged VLAN帧，或简称Tagged帧），也可能不带Tag（称为Untagged VLAN帧，或简称Untagged帧）。所有达到这个端口的Untagged帧将一律打上该端口PVID的tag，划分到PVID所指代的VLAN中。</p>
 <section id="access">
-<h3><span class="section-number">3.3.1. </span>Access端口<a class="headerlink" href="#access" title="永久链接至标题"></a></h3>
+<h3>Access端口<a class="headerlink" href="#access" title="永久链接至标题"></a></h3>
 <p>Access 端口一般是指那些连接不支持 VLAN 技术的终端设备的端口，这些端口接收到的数据帧都不包含 VLAN 标签，而向外发送数据帧时，必须保证数据帧中也不包含 VLAN 标签。交换机的Access 端口一般接主机或路由器。</p>
 <p><strong>Access端口收报文</strong> ：收到一个报文,判断是否有VLAN标签：如果没有则打上端口的PVID（默认VLAN ID），并进行交换转发；如果有，交换机会检查这个报文的tag中的VID是否与PVID相同，如果相同，则队这个Tagged帧进行转发，如果不同，则直接丢弃。</p>
 <img alt="../_images/access-2.png" src="../_images/access-2.png" />
@@ -187,7 +139,7 @@
 <img alt="../_images/access.png" src="../_images/access.png" />
 </section>
 <section id="trunk">
-<h3><span class="section-number">3.3.2. </span>Trunk端口<a class="headerlink" href="#trunk" title="永久链接至标题"></a></h3>
+<h3>Trunk端口<a class="headerlink" href="#trunk" title="永久链接至标题"></a></h3>
 <p>Trunk 端口一般是指那些连接支持 VLAN 技术的网络设备（如交换机）的端口，这些端口接收到的数据帧一般都包含 VLAN 标签（数据帧 VLAN ID 和端口缺省 VLAN ID 相同除外），而向外发送数据帧时，必须保证接收端能够区分不同 VLAN 的数据帧，故常常需要添加 VLAN 标签（数据帧 VLAN ID 和端口缺省 VLAN ID 相同除外）。一般用于交换机之间的连接。</p>
 <p><strong>Trunk端口收报文</strong> ：收到一个报文，判断是否有VLAN标签。如果没有则打上端口的PVID（默认VLAN），再进行交换转发；如果有判断该trunk端口是否允许该 VLAN的数据进入，如果可以则转发，否则丢弃；</p>
 <img alt="../_images/trunk-2.png" src="../_images/trunk-2.png" />
@@ -204,17 +156,17 @@
 </section>
 </section>
 <section id="id6">
-<h1><span class="section-number">4. </span>实验环境与分组<a class="headerlink" href="#id6" title="永久链接至标题"></a></h1>
+<h1>实验环境与分组<a class="headerlink" href="#id6" title="永久链接至标题"></a></h1>
 <p>cisco packet tracer模拟器，一人一组。</p>
 </section>
 <section id="id7">
-<h1><span class="section-number">5. </span>实验组网<a class="headerlink" href="#id7" title="永久链接至标题"></a></h1>
+<h1>实验组网<a class="headerlink" href="#id7" title="永久链接至标题"></a></h1>
 <img alt="../_images/cisco组网图.png" src="../_images/cisco组网图.png" />
 </section>
 <section id="id8">
-<h1><span class="section-number">6. </span>实验步骤<a class="headerlink" href="#id8" title="永久链接至标题"></a></h1>
+<h1>实验步骤<a class="headerlink" href="#id8" title="永久链接至标题"></a></h1>
 <section id="id9">
-<h2><span class="section-number">6.1. </span>搭建网络拓扑<a class="headerlink" href="#id9" title="永久链接至标题"></a></h2>
+<h2>搭建网络拓扑<a class="headerlink" href="#id9" title="永久链接至标题"></a></h2>
 <p>打开Cisco Packet Tracer软件(Cisco Packet Tracer 绿色版\bin\PacketTracer7.exe)。在底部工具栏区域，选择“Network Devices”，点击“Swithes”，将二层交换机“2960-24TT”拖拽到空白工作区中（需要拖拽两台二层交换机）。</p>
 <a class="reference internal image-reference" href="../_images/conf-1.png"><img alt="../_images/conf-1.png" src="../_images/conf-1.png" style="width: 470.40000000000003px; height: 132.8px;" /></a>
 <p>接着，在底部工具栏区域，选择“End Devices”，点击最下一栏的“End Devices”，将计算机设备“PC”拖拽到空白工作区中（需要拖拽4台PC机）。</p>
@@ -246,17 +198,17 @@
 </div>
 </section>
 <section id="vlan2">
-<h2><span class="section-number">6.2. </span>进入交换机配置vlan2添加相应接口<a class="headerlink" href="#vlan2" title="永久链接至标题"></a></h2>
+<h2>进入交换机配置vlan2添加相应接口<a class="headerlink" href="#vlan2" title="永久链接至标题"></a></h2>
 <section id="swtich0">
-<h3><span class="section-number">6.2.1. </span>进入Swtich0的用户模式<a class="headerlink" href="#swtich0" title="永久链接至标题"></a></h3>
+<h3>进入Swtich0的用户模式<a class="headerlink" href="#swtich0" title="永久链接至标题"></a></h3>
 <p>单击Switch0图标，在弹出的窗口里点击“CLI”选项卡，在“IOS Command Line Interface”工作区中敲回车键，进入交换机的用户模式</p>
 <a class="reference internal image-reference" href="../_images/conf-10.png"><img alt="../_images/conf-10.png" src="../_images/conf-10.png" style="width: 525.6px; height: 504.0px;" /></a>
 </section>
 <section id="switch0vlan-2">
-<h3><span class="section-number">6.2.2. </span>配置Switch0的VLAN 2<a class="headerlink" href="#switch0vlan-2" title="永久链接至标题"></a></h3>
+<h3>配置Switch0的VLAN 2<a class="headerlink" href="#switch0vlan-2" title="永久链接至标题"></a></h3>
 <p>在Switch0交换机上使用下列命令进行VLAN配置：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>Switch&gt;enable   //进入交换机特权模式
-<span class="linenos"> 2</span>Switch#configure terminal  // 进入交换机全局模式（也称为config模式）
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>Switch&gt;enable<span class="w">   </span>//进入交换机特权模式
+<span class="linenos"> 2</span>Switch#configure<span class="w"> </span>terminal<span class="w">  </span>//<span class="w"> </span>进入交换机全局模式（也称为config模式）
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span>Switch<span class="o">(</span>config<span class="o">)</span><span class="c1">#  // 全局模式的提示符是“(config)#”</span>
 <span class="linenos"> 5</span>Switch<span class="o">(</span>config<span class="o">)</span><span class="c1"># hostname Switch0 // 更改交换机的主机名</span>
@@ -278,15 +230,15 @@
 </div>
 </section>
 <section id="switch0vlan">
-<h3><span class="section-number">6.2.3. </span>观察配置Switch0的VLAN信息<a class="headerlink" href="#switch0vlan" title="永久链接至标题"></a></h3>
+<h3>观察配置Switch0的VLAN信息<a class="headerlink" href="#switch0vlan" title="永久链接至标题"></a></h3>
 <p>在Switch0上查看划分的vlan信息：</p>
 <a class="reference internal image-reference" href="../_images/conf-11.png"><img alt="../_images/conf-11.png" src="../_images/conf-11.png" style="width: 677.6px; height: 496.8px;" /></a>
 </section>
 <section id="switch1vlan-2">
-<h3><span class="section-number">6.2.4. </span>配置Switch1的VLAN 2<a class="headerlink" href="#switch1vlan-2" title="永久链接至标题"></a></h3>
+<h3>配置Switch1的VLAN 2<a class="headerlink" href="#switch1vlan-2" title="永久链接至标题"></a></h3>
 <p>在Switch1交换机上使用下列命令进行VLAN配置：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>Switch&gt;enable   //进入系统视图
-<span class="linenos"> 2</span>Switch#configure terminal
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>Switch&gt;enable<span class="w">   </span>//进入系统视图
+<span class="linenos"> 2</span>Switch#configure<span class="w"> </span>terminal
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span>Switch<span class="o">(</span>config<span class="o">)</span><span class="c1">#</span>
 <span class="linenos"> 5</span>Switch<span class="o">(</span>config<span class="o">)</span><span class="c1"># hostname Switch1 // 更改交换机的主机名</span>
@@ -308,12 +260,12 @@
 </div>
 </section>
 <section id="switch1vlan">
-<h3><span class="section-number">6.2.5. </span>观察Switch1的VLAN信息<a class="headerlink" href="#switch1vlan" title="永久链接至标题"></a></h3>
+<h3>观察Switch1的VLAN信息<a class="headerlink" href="#switch1vlan" title="永久链接至标题"></a></h3>
 <p>在Switch1上查看划分的vlan信息：</p>
 <a class="reference internal image-reference" href="../_images/conf-14.png"><img alt="../_images/conf-14.png" src="../_images/conf-14.png" style="width: 666.4000000000001px; height: 498.40000000000003px;" /></a>
 </section>
 <section id="ip">
-<h3><span class="section-number">6.2.6. </span>设置计算机的IP地址<a class="headerlink" href="#ip" title="永久链接至标题"></a></h3>
+<h3>设置计算机的IP地址<a class="headerlink" href="#ip" title="永久链接至标题"></a></h3>
 <p>为PC0~PC3配置IP地址，如下表所示。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -353,7 +305,7 @@
 <p>可参照PC0的配置方式来配置PC1、PC2和PC3的IP地址。</p>
 </section>
 <section id="vlanvlan">
-<h3><span class="section-number">6.2.7. </span>观察同一VLAN和不同VLAN的连通情况<a class="headerlink" href="#vlanvlan" title="永久链接至标题"></a></h3>
+<h3>观察同一VLAN和不同VLAN的连通情况<a class="headerlink" href="#vlanvlan" title="永久链接至标题"></a></h3>
 <p>单击PC0，在Desktop选项卡中，单击“Command Prompt”选项，则可进入命令行模式。</p>
 <a class="reference internal image-reference" href="../_images/conf-16.png"><img alt="../_images/conf-16.png" src="../_images/conf-16.png" style="width: 708.8000000000001px; height: 488.0px;" /></a>
 <div class="admonition important">
@@ -366,12 +318,12 @@
 </section>
 </section>
 <section id="vlan3ip">
-<h2><span class="section-number">6.3. </span>进入交换机配置vlan3接口ip并观察连通性<a class="headerlink" href="#vlan3ip" title="永久链接至标题"></a></h2>
+<h2>进入交换机配置vlan3接口ip并观察连通性<a class="headerlink" href="#vlan3ip" title="永久链接至标题"></a></h2>
 <section id="switch0vlan-3">
-<h3><span class="section-number">6.3.1. </span>配置Switch0的VLAN 3<a class="headerlink" href="#switch0vlan-3" title="永久链接至标题"></a></h3>
+<h3>配置Switch0的VLAN 3<a class="headerlink" href="#switch0vlan-3" title="永久链接至标题"></a></h3>
 <p>在Switch0交换机上的系统视图下使用下列命令进行配置：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>Switch0&gt;enable
-<span class="linenos"> 2</span>Switch0#configure terminal
+<span class="linenos"> 2</span>Switch0#configure<span class="w"> </span>terminal
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span>Switch0<span class="o">(</span>config<span class="o">)</span><span class="c1">#vlan 3  //创建vlan 3</span>
 <span class="linenos"> 5</span>Switch0<span class="o">(</span>config-vlan<span class="o">)</span><span class="c1">#exit</span>
@@ -386,15 +338,15 @@
 </div>
 </section>
 <section id="id10">
-<h3><span class="section-number">6.3.2. </span>观察Switch0的VLAN信息<a class="headerlink" href="#id10" title="永久链接至标题"></a></h3>
+<h3>观察Switch0的VLAN信息<a class="headerlink" href="#id10" title="永久链接至标题"></a></h3>
 <p>在Switch0上使用“show vlan”命令查看VLAN的信息。</p>
 <a class="reference internal image-reference" href="../_images/conf-18.png"><img alt="../_images/conf-18.png" src="../_images/conf-18.png" style="width: 671.2px; height: 244.0px;" /></a>
 </section>
 <section id="switch1vlan-3">
-<h3><span class="section-number">6.3.3. </span>配置Switch1的VLAN 3<a class="headerlink" href="#switch1vlan-3" title="永久链接至标题"></a></h3>
+<h3>配置Switch1的VLAN 3<a class="headerlink" href="#switch1vlan-3" title="永久链接至标题"></a></h3>
 <p>在Switch1交换机上的系统视图下使用下列命令进行配置：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>Switch1&gt;enable
-<span class="linenos"> 2</span>Switch1#configure terminal
+<span class="linenos"> 2</span>Switch1#configure<span class="w"> </span>terminal
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span>Switch1<span class="o">(</span>config<span class="o">)</span><span class="c1">#vlan 3  //创建vlan 3</span>
 <span class="linenos"> 5</span>Switch1<span class="o">(</span>config-vlan<span class="o">)</span><span class="c1">#exit</span>
@@ -409,12 +361,12 @@
 </div>
 </section>
 <section id="id11">
-<h3><span class="section-number">6.3.4. </span>观察Switch1的VLAN信息<a class="headerlink" href="#id11" title="永久链接至标题"></a></h3>
+<h3>观察Switch1的VLAN信息<a class="headerlink" href="#id11" title="永久链接至标题"></a></h3>
 <p>在Switch1上使用“show vlan”命令查看VLAN的信息。</p>
 <a class="reference internal image-reference" href="../_images/conf-19.png"><img alt="../_images/conf-19.png" src="../_images/conf-19.png" style="width: 656.0px; height: 243.20000000000002px;" /></a>
 </section>
 <section id="vlan-3">
-<h3><span class="section-number">6.3.5. </span>观察同一VLAN 3的连通情况<a class="headerlink" href="#vlan-3" title="永久链接至标题"></a></h3>
+<h3>观察同一VLAN 3的连通情况<a class="headerlink" href="#vlan-3" title="永久链接至标题"></a></h3>
 <p>验证测试：在PC1上ping PC3验证连通性，还是没有ping通。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -424,9 +376,9 @@
 </section>
 </section>
 <section id="id12">
-<h2><span class="section-number">6.4. </span>配置接口trunk模式并验证连通性<a class="headerlink" href="#id12" title="永久链接至标题"></a></h2>
+<h2>配置接口trunk模式并验证连通性<a class="headerlink" href="#id12" title="永久链接至标题"></a></h2>
 <section id="switch0switch1trunk">
-<h3><span class="section-number">6.4.1. </span>配置Switch0和Switch1的trunk端口<a class="headerlink" href="#switch0switch1trunk" title="永久链接至标题"></a></h3>
+<h3>配置Switch0和Switch1的trunk端口<a class="headerlink" href="#switch0switch1trunk" title="永久链接至标题"></a></h3>
 <p>将Switch0与Switch1的f0/4接口模式配置为trunk，使得所有VLAN都可以通过。
 在Switch0交换机下使用下列命令进行配置：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>Switch0<span class="o">(</span>config<span class="o">)</span><span class="c1">#interface f0/4 //进入f0/4接口</span>
@@ -459,12 +411,12 @@
 <a class="reference internal image-reference" href="../_images/conf-22.png"><img alt="../_images/conf-22.png" src="../_images/conf-22.png" style="width: 400.0px; height: 450.40000000000003px;" /></a>
 </section>
 <section id="id13">
-<h3><span class="section-number">6.4.2. </span>观察VLAN 3的连通情况<a class="headerlink" href="#id13" title="永久链接至标题"></a></h3>
+<h3>观察VLAN 3的连通情况<a class="headerlink" href="#id13" title="永久链接至标题"></a></h3>
 <p>在PC1上使用ping PC3命令测试连通性，如图：</p>
 <a class="reference internal image-reference" href="../_images/conf-23.png"><img alt="../_images/conf-23.png" src="../_images/conf-23.png" style="width: 681.6px; height: 584.8000000000001px;" /></a>
 </section>
 <section id="id14">
-<h3><span class="section-number">6.4.3. </span>观察同一VLAN和不同VLAN的连通情况<a class="headerlink" href="#id14" title="永久链接至标题"></a></h3>
+<h3>观察同一VLAN和不同VLAN的连通情况<a class="headerlink" href="#id14" title="永久链接至标题"></a></h3>
 <p>在PC0上使用ping PC2命令测试连通性，在PC0上使用ping PC3命令测试连通性，如图:</p>
 <a class="reference internal image-reference" href="../_images/conf-24.png"><img alt="../_images/conf-24.png" src="../_images/conf-24.png" style="width: 681.6px; height: 601.6px;" /></a>
 <p>完成trunk模式配置后，PC0和PC2互通，PC1和PC3互通，PC0和PC3不连通。注意，保存好你的组网图，并填写实验报告。</p>
@@ -488,22 +440,19 @@
 </section>
 </section>
 <section id="id15">
-<h1><span class="section-number">7. </span>实验提交<a class="headerlink" href="#id15" title="永久链接至标题"></a></h1>
+<h1>实验提交<a class="headerlink" href="#id15" title="永久链接至标题"></a></h1>
 <p>本实验提交 <strong>实验报告（详见课程群）</strong> 。</p>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Lab1：VLAN 与接口模式配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="../lab2/index.html" class="btn btn-neutral float-right" title="Lab2：协议栈之Eth协议实现" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

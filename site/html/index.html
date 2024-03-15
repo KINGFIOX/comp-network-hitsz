@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>计算机网络实验指导书 - 2023春季 | 哈工大（深圳） &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>计算机网络实验指导书 - 2024春季 | 哈工大（深圳） &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/my_style.css" type="text/css" />
@@ -29,7 +29,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="#" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -49,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proplus/index.html">附加题</a></li>
 </ul>
@@ -57,11 +57,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-g/index.html">常见问题</a></li>
 </ul>
 
         </div>
@@ -70,7 +70,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="#">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -78,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</li>
+      <li>计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -89,40 +89,46 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>计算机网络实验指导书 - 2023春季 | 哈工大（深圳）<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
+<h1>计算机网络实验指导书 - 2024春季 | 哈工大（深圳）<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>本实验文档仅限于哈尔滨工业大学（深圳）《计算机网络》2023年课程实验使用，如有其他用途，请联系仇老师 <a class="reference external" href="mailto:qiujieting&#37;&#52;&#48;hit&#46;edu&#46;cn">qiujieting<span>&#64;</span>hit<span>&#46;</span>edu<span>&#46;</span>cn</a>。</p>
+<p>本实验文档仅限于哈尔滨工业大学（深圳）《计算机网络》2024年课程实验使用，如有其他用途，请联系仇老师 <a class="reference external" href="mailto:qiujieting&#37;&#52;&#48;hit&#46;edu&#46;cn">qiujieting<span>&#64;</span>hit<span>&#46;</span>edu<span>&#46;</span>cn</a>。</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
 <p>请同学们遵守学术诚信，主动避免去阅读、使用任何人/互联网上的实验代码，也不要在互联网上公布你的代码，Coding的过程远比结果重要。</p>
-<p>所以，请你自己动手实践，日拱一卒，功不唐捐，静心享受Coding带来的快乐吧：）</p>
+<p>因此，请你自己动手实践，日拱一卒，功不唐捐，静心享受Coding带来的快乐吧：）</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>我们已为自己制定了一个宏伟的目标：了解如何从最底层开始建造计算机网络。要实现这个目标，我们将从基本原理开始，然后提出再建造实际的网络时经常遇到的各种问题。在每一步，我们会利用现有的协议去说明各种可行的设计方案，但是并不将这些人为的协议视作不变的真理。相反，我们要不断地提出（并回答）网络为什么要如此设计的问题。在力求让人们理解现今网络的工作方式的同时认识基本概念是很重要的，因为随着技术的发展和新应用的不断出现，网络的变化日新月异。依照我们的经验，一旦人们理解了基本思想，对于遇到的任何新协议，消化和吸收起来都变得相对容易。</p>
 <blockquote>
-<div><p>————摘自《计算机网络系统方法》第一章</p>
+<div><p>————摘自Larry L. Peterson, Bruce S. Davie《计算机网络系统方法》第一章, P4</p>
 </div></blockquote>
 </div>
 <section id="id2">
 <h2>导读<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
-<p>本实验文档为哈尔滨工业大学（深圳）《计算机网络》课程实验指导材料。请大家先阅读 <a class="reference internal" href="lab0/index.html"><span class="doc">计算机网络实验概述</span></a>，对实验课程有一个整体的认识。关于配置实验，请先阅读 <a class="reference internal" href="appendix-c/index.html"><span class="doc">附录 C：Cisco Packet Tracer简介</span></a>，掌握Cisco Packet Tracer的基本用法。关于协议栈编程实验，请先按照 <a class="reference internal" href="appendix-b/index.html"><span class="doc">附录 B：网络编程实验环境</span></a> 中的说明搭建实验环境，然后再从“协议栈之Eth协议实现”做起。对于有兴趣有余力的同学，建议完成 <a class="reference internal" href="proplus/index.html"><span class="doc">附加题</span></a>，若能完成会有意想不到的惊喜！</p>
+<p>本实验文档为哈尔滨工业大学（深圳）《计算机网络》课程实验指导材料。请大家先阅读 <a class="reference internal" href="lab0/index.html"><span class="doc">计算机网络实验概述</span></a>，对实验课程有一个整体的认识。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>在进行配置实验时，我们将采用实验机柜的物理设备来完成实验操作，以便更贴近实际网络环境。在开始配置实验之前，请先阅读 <a class="reference internal" href="appendix-c/index.html"><span class="doc">附录 C：网络实验室环境及设备简介</span></a>，了解网络实验室布局及网络设备的基本用法，这将有助于你更好地理解和完成实验任务。</p></li>
+<li><p>在进行协议栈编程实验时，请先按照 <a class="reference internal" href="appendix-b/index.html"><span class="doc">附录 B：网络编程实验环境</span></a> 中的说明搭建实验环境，然后再从“协议栈之Eth协议实现”做起。对于有兴趣有余力的同学，建议完成 <a class="reference internal" href="proplus/index.html"><span class="doc">附加题</span></a>，若能完成会有意想不到的惊喜！</p></li>
+</ul>
+</div></blockquote>
 <p>如果同学们对本课程实验内容、实验安排、实验指导书或者代码框架等各方面有宝贵的意见或建议，请私信老师或助教。</p>
 </section>
 <section id="id3">
 <h2>实验相关链接<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
 <ol class="arabic simple">
 <li><p>实验指导书仓库：<a class="reference external" href="https://gitee.com/hitsz-cslab/comp-network.git">https://gitee.com/hitsz-cslab/comp-network.git</a></p></li>
-<li><p>协议栈编程实验仓库：<a class="reference external" href="https://gitee.com/hitsz-cslab/net-lab.git">https://gitee.com/hitsz-cslab/net-lab.git</a></p></li>
-<li><p>邮件客户端实验仓库：<a class="reference external" href="https://gitee.com/hitsz-lab/maillab.git">https://gitee.com/hitsz-lab/maillab.git</a></p></li>
+<li><p>协议栈编程实验仓库：<a class="reference external" href="https://gitee.com/q601/net-lab.git">https://gitee.com/q601/net-lab.git</a></p></li>
+<li><p>邮件客户端实验仓库：<a class="reference external" href="https://gitee.com/q601/maillab.git">https://gitee.com/q601/maillab.git</a></p></li>
 </ol>
 <section id="id4">
 <span id="id5"></span><h3>获取协议栈编程实验框架代码<a class="headerlink" href="#id4" title="永久链接至标题"></a></h3>
 <p>关于协议栈实验的实验环境，请参考 <a class="reference internal" href="appendix-b/index.html"><span class="doc">附录 B：网络编程实验环境</span></a></p>
 <p>在命令中执行：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$ git clone https://gitee.com/hitsz-cslab/net-lab.git
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://gitee.com/q601/net-lab.git
 </pre></div>
 </div>
 <p>获取框架代码，将克隆net-lab到当前目录。如遇问题请联系老师或助教。</p>
@@ -131,7 +137,7 @@
 <span id="id7"></span><h3>获取邮件客户端编程实验框架代码<a class="headerlink" href="#id6" title="永久链接至标题"></a></h3>
 <p>关于邮件客户端实验的实验环境，请参考 <a class="reference internal" href="appendix-d/index.html"><span class="doc">附录 D：邮件客户端实验环境</span></a></p>
 <p>在命令中执行：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$ git clone https://gitee.com/q601/maillab.git
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://gitee.com/q601/maillab.git
 </pre></div>
 </div>
 <p>获取框架代码，将克隆maillab到当前目录。如遇问题请联系老师或助教。</p>
@@ -153,7 +159,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

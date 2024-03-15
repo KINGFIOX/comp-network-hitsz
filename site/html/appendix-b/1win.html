@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. Windows开发环境搭建 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>1. Windows开发环境搭建 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -76,11 +76,11 @@
 <li class="toctree-l2"><a class="reference internal" href="2linux.html">2. Linux开发环境搭建</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -89,7 +89,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -185,76 +185,76 @@
 <p>其中，“miDebuggerPath”是你安装TDM-GCC的路径，请填写你自己的安装路径。</p>
 <p>“program”和“args”则要根据你当前需要调试的实验进行修改。</p>
 <p><strong>eth_in</strong> ：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\eth_in.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\eth_in&quot;</span><span class="p">],</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\eth_in.exe&quot;</span><span class="p">,</span>
+<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\eth_in&quot;</span><span class="p">],</span>
 </pre></div>
 </div>
 <p><strong>eth_out</strong> ：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\eth_out.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\eth_out&quot;</span><span class="p">],</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\eth_out.exe&quot;</span><span class="p">,</span>
+<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\eth_out&quot;</span><span class="p">],</span>
 </pre></div>
 </div>
 <p><strong>arp_test</strong> ：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\arp_test.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\arp_test&quot;</span><span class="p">],</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\arp_test.exe&quot;</span><span class="p">,</span>
+<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\arp_test&quot;</span><span class="p">],</span>
 </pre></div>
 </div>
 <p><strong>ip_test</strong> ：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\ip_test.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\ip_test&quot;</span><span class="p">],</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\ip_test.exe&quot;</span><span class="p">,</span>
+<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\ip_test&quot;</span><span class="p">],</span>
 </pre></div>
 </div>
 <p><strong>ip_frag_test</strong> ：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\ip_frag_test.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\ip_frag_test&quot;</span><span class="p">],</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\ip_frag_test.exe&quot;</span><span class="p">,</span>
+<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\ip_frag_test&quot;</span><span class="p">],</span>
 </pre></div>
 </div>
 <p><strong>icmp_test</strong> ：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\icmp_test.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\icmp_test&quot;</span><span class="p">],</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">         </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\icmp_test.exe&quot;</span><span class="p">,</span>
+<span class="linenos">2</span><span class="w">         </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\icmp_test&quot;</span><span class="p">],</span>
 </pre></div>
 </div>
 <p>以下是 <strong>eth_in</strong> 调试的完整的launch.json，大家可以参考下面的来修改：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gcc.exe build and debug active file&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\eth_in.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\eth_in&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">            </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">            </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">            </span><span class="nt">&quot;externalConsole&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">            </span><span class="nt">&quot;MIMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdb&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">            </span><span class="nt">&quot;miDebuggerPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\gdb.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">            </span><span class="nt">&quot;setupCommands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">                    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enable pretty-printing for gdb&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">                    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-enable-pretty-printing&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">                    </span><span class="nt">&quot;ignoreFailures&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">               </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">            </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">    </span><span class="p">]</span><span class="w"></span>
-<span class="linenos">26</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gcc.exe build and debug active file&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\eth_in.exe&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing\\data\\eth_in&quot;</span><span class="p">],</span>
+<span class="linenos">10</span><span class="w">            </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">            </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="linenos">13</span><span class="w">            </span><span class="nt">&quot;externalConsole&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">            </span><span class="nt">&quot;MIMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdb&quot;</span><span class="p">,</span>
+<span class="linenos">15</span><span class="w">            </span><span class="nt">&quot;miDebuggerPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\gdb.exe&quot;</span><span class="p">,</span>
+<span class="linenos">16</span><span class="w">            </span><span class="nt">&quot;setupCommands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">17</span><span class="w">               </span><span class="p">{</span>
+<span class="linenos">18</span><span class="w">                    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enable pretty-printing for gdb&quot;</span><span class="p">,</span>
+<span class="linenos">19</span><span class="w">                    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-enable-pretty-printing&quot;</span><span class="p">,</span>
+<span class="linenos">20</span><span class="w">                    </span><span class="nt">&quot;ignoreFailures&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="linenos">21</span><span class="w">               </span><span class="p">}</span>
+<span class="linenos">22</span><span class="w">            </span><span class="p">],</span>
+<span class="linenos">23</span><span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span>
+<span class="linenos">24</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">]</span>
+<span class="linenos">26</span><span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Step4：</strong> 修改.vscode\tasks.json文件，使得调试前能自动编译。（如果.vscode目录下没有生成“tasks.json”文件，你也可以自行在.vscode目录下新建“tasks.json”文件）</p>
 <img alt="../_images/gdb-5.png" src="../_images/gdb-5.png" />
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">     </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">     </span><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">                     </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shell&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">                     </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cd ${workspaceFolder}\\build; cmake --build .&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">             </span><span class="p">}</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">     </span><span class="p">]</span><span class="w"></span>
-<span class="linenos">10</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 4</span><span class="w">             </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">                     </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shell&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">                     </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cd ${workspaceFolder}\\build; cmake --build .&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">             </span><span class="p">}</span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="p">]</span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Step4：</strong> 再次单击VSCode左侧的“运行和调试（run）”工具栏，单击“gcc.exe”按钮，在代码中打上断点。比如我们想要调试ethernet_in函数，可以在该函数中打上断点，然后选择“调试”，接下来，就可以愉快地进行暂停、单步跳过、单步调试、单步跳出、重启、停止等这些调试操作了。</p>
@@ -275,32 +275,32 @@
 <p><strong>2. Run and test调试法：</strong></p>
 <p>如果上述方式调试不了，也可以手动改一下launch.json文件。</p>
 <p>以下是 <strong>main</strong> 调试的完整的launch.json，大家可以参考下面的来修改：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gcc.exe build and debug active file&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\main.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">            </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">            </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">            </span><span class="nt">&quot;externalConsole&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">            </span><span class="nt">&quot;MIMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdb&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">            </span><span class="nt">&quot;miDebuggerPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\gdb.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">            </span><span class="nt">&quot;setupCommands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">                    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enable pretty-printing for gdb&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">                    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-enable-pretty-printing&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">                    </span><span class="nt">&quot;ignoreFailures&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">               </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">            </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">    </span><span class="p">]</span><span class="w"></span>
-<span class="linenos">26</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gcc.exe build and debug active file&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}\\build\\main.exe&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="linenos">10</span><span class="w">            </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">            </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="linenos">13</span><span class="w">            </span><span class="nt">&quot;externalConsole&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">            </span><span class="nt">&quot;MIMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdb&quot;</span><span class="p">,</span>
+<span class="linenos">15</span><span class="w">            </span><span class="nt">&quot;miDebuggerPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\gdb.exe&quot;</span><span class="p">,</span>
+<span class="linenos">16</span><span class="w">            </span><span class="nt">&quot;setupCommands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">17</span><span class="w">               </span><span class="p">{</span>
+<span class="linenos">18</span><span class="w">                    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enable pretty-printing for gdb&quot;</span><span class="p">,</span>
+<span class="linenos">19</span><span class="w">                    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-enable-pretty-printing&quot;</span><span class="p">,</span>
+<span class="linenos">20</span><span class="w">                    </span><span class="nt">&quot;ignoreFailures&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="linenos">21</span><span class="w">               </span><span class="p">}</span>
+<span class="linenos">22</span><span class="w">            </span><span class="p">],</span>
+<span class="linenos">23</span><span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span>
+<span class="linenos">24</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">]</span>
+<span class="linenos">26</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>注意，”args”不需要填参数。</p>
@@ -308,13 +308,12 @@
 <img alt="../_images/gdb-6.png" src="../_images/gdb-6.png" />
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
-<p>协议栈的Eth、ARP、IP、ICMP协议实验提供了自测环境，该自测环境是自构建了一套读写离线数据包的驱动层，然后通过对比log和pcap文件来分析这些协议是否能收发。因此， <strong>在Eth、ARP、IP、ICMP协议实验中，不要修改config.h头文件中的NET_IF_IP和NET_IF_MAC</strong> 。</p>
-<p>但当我们做到UDP/TCP/HTTP实验时，需要用到网络上真实的UDP/TCP调试工具（或浏览器）与我们自构建的协议栈进行点对点通信，以此来测试整个网络协议栈是否能正常收发。我们的协议栈通过虚构了一张虚拟网卡，由虚拟网卡和真实网卡进行通信，这两张网卡的IP地址必须不一样（举个栗子，如果一个班级内有两位同学同名同姓，很难通过名字来区分你到底想要找谁），同时也要确保它们处于同一个网段内（不同网段的两台设备要相互通信，需要三层网络设备）。因此， <strong>在UDP实验调试之前，必须修改include/config.h头文件中的NET_IF_IP宏定义</strong> ，即需要自定义网卡的IP地址。</p>
-<p>自定义网卡的IP地址要求：</p>
-<ul class="simple">
-<li><p>该IP地址的网络号必须与你自己电脑中真实网卡的网络号一致（也就是和真实网卡处于同一个网段内）。注意：此处是 <strong>网络号</strong> 要和真实网卡一致，以确保它们处在同一个网段内， <strong>不是将自定义网卡（虚拟网卡）的IP地址设置成真实网卡的IP地址</strong> 。关于网络地址（网络号）说明可参考 <a class="reference internal" href="../lab5/index.html"><span class="doc">Lab5：协议栈之IP协议实现</span></a> 的实验原理部分。</p></li>
-<li><p>该IP地址的主机号必须与真实网卡的主机号不一样，以确保两张网卡的IP地址不一样。</p></li>
-</ul>
+<p>在Eth、ARP、IP、ICMP协议的实验中，我们提供了一个自测环境，该环境通过自构建的驱动层来读写离线数据包，并通过对比log和pcap文件来验证这些协议的收发功能。因此， <strong>在进行Eth、ARP、IP、ICMP协议实验时，请务必保持config.h头文件中的NET_IF_IP和NET_IF_MAC宏定义不变</strong> 。</p>
+<p>然而，在进行UDP/TCP/HTTP实验时，情况有所不同。为了测试整个网络协议栈的收发功能，我们需要使用真实的UDP/TCP调试工具（或浏览器）与我们自构建的协议栈进行点对点通信。我们的协议栈通过虚构一张虚拟网卡来实现与真实网卡的通信。重要的是，这两张网卡的IP地址必须不同，以避免混淆和冲突。同时，它们必须处于同一网段内，以确保通信的顺畅进行。因此， <strong>在进行UDP实验调试之前，您必须修改include/config.h头文件中的NET_IF_IP宏定义</strong> ，自定义网卡的IP地址以满足这一要求。</p>
+<p>在进行UDP/TCP/HTTP实验时，需要自定义虚拟网卡的IP地址。这个IP地址的设定有特定的要求：</p>
+<p>首先，虚拟网卡的IP地址的网络号（即IP地址的前半部分，用于标识网络段）必须与你计算机上真实网卡的网络号保持一致。这样做是为了确保虚拟网卡和真实网卡在同一个网段内，从而能够相互通信。请注意，这里要求的是网络号一致，而不是将整个虚拟网卡的IP地址设置成与真实网卡完全相同。</p>
+<p>其次，虚拟网卡的IP地址的主机号（即IP地址的后半部分，用于标识网络内的具体设备）必须与真实网卡的主机号不同。这是为了确保虚拟网卡和真实网卡在网络中具有唯一的身份标识，避免IP地址冲突。</p>
+<p>总之，在设置虚拟网卡的IP地址时，请确保网络号与真实网卡一致，同时主机号与真实网卡不同，以满足网络通信的需求。</p>
 <img alt="../_images/vscode5.png" src="../_images/vscode5.png" />
 </div>
 </section>
@@ -332,7 +331,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

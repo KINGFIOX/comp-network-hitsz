@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. 实验目的 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>1. 实验目的 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -28,7 +28,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -48,7 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -56,11 +56,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -69,7 +69,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -111,9 +111,9 @@
 <h2><span class="section-number">3.2. </span>socket套接字<a class="headerlink" href="#socket" title="永久链接至标题"></a></h2>
 <p>应用程序调用socket申请创建套接字，协议栈根据应用程序的申请执行创建套接字的操作。</p>
 <p>套接字的实体就是协议栈分配的用于存放一个套接字所需的的内存空间，在这块内存空间里主要存放 <strong>通信控制信息</strong> ，例如通信对象的IP地址、端口号、通信操作的状态等。套接字刚刚创建时，首先分配一个套接字所需的内存空间，但数据收发操作还没有开始，只向其中写入表示初始状态的控制信息。</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
 <span class="linenos">2</span>
-<span class="hll"><span class="linenos">3</span><span class="kt">int</span><span class="w"> </span><span class="nf">socket</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">family</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">protocol</span><span class="p">);</span><span class="w"></span>
+<span class="hll"><span class="linenos">3</span><span class="kt">int</span><span class="w"> </span><span class="nf">socket</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">family</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">protocol</span><span class="p">);</span>
 </span><span class="linenos">4</span><span class="c1">// 返回：非负描述字 —— 成功，-1 —— 出错</span>
 </pre></div>
 </div>
@@ -197,9 +197,9 @@
 </tbody>
 </table>
 <p>一般来说，socket的type值主要是SOCK_STREAM和SOCK_DGRAM，但是它们并不能很好地满足对于数据链路层整体包的捕获要求。Raw socket套接字可用于在MAC层上收发原始数据帧，这样就允许用户在用户空间完成MAC之上各个层次的收发，进而可以对整个网络的数据进行监控和控制，给开发或测试带来了极大的便利性。因此，在本次实验中，我们需要使用原始套接字SOCK_RAW来获取MAC层上的原始数据帧，可以参考以下方式创建能够发送和接收 <strong>以太网数据帧</strong> 的Raw socket套接字：</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
 <span class="linenos">2</span>
-<span class="linenos">3</span><span class="n">socket_fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">PF_PACKET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_RAW</span><span class="p">,</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">ETH_P_IP</span><span class="w"> </span><span class="o">|</span><span class="n">ETH_P_ARP</span><span class="w"> </span><span class="o">|</span><span class="n">ETH_P_ALL</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">3</span><span class="n">socket_fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">PF_PACKET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_RAW</span><span class="p">,</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">ETH_P_IP</span><span class="w"> </span><span class="o">|</span><span class="n">ETH_P_ARP</span><span class="w"> </span><span class="o">|</span><span class="n">ETH_P_ALL</span><span class="p">));</span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -209,7 +209,7 @@
 <p>在Linux中，调用man可以查看相关命令的调用细节， 如 man socket。</p>
 <img alt="../_images/man-socket.jpg" src="../_images/man-socket.jpg" />
 <p>创建完一个socket之后，就可以调用recvfrom()函数接收数据链路层的数据帧了。</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">recvfrom</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">socket_fd</span><span class="p">,</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">,</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_addr</span><span class="p">,</span><span class="kt">socklen_t</span><span class="w"> </span><span class="o">*</span><span class="n">addrlen</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">recvfrom</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">socket_fd</span><span class="p">,</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">,</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_addr</span><span class="p">,</span><span class="kt">socklen_t</span><span class="w"> </span><span class="o">*</span><span class="n">addrlen</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>其中buf是收到的包所存放的位置。</p>
@@ -232,71 +232,71 @@
 <section id="id6">
 <h1><span class="section-number">4. </span>实验实现<a class="headerlink" href="#id6" title="永久链接至标题"></a></h1>
 <p>下面给出一个简单的抓包代码。该程序不断地接收数据链路层的数据包，并显示包头类型和部分内容。</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 3</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 4</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 5</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;linux/if_ether.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 6</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+<span class="linenos"> 3</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<span class="linenos"> 5</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;linux/if_ether.h&gt;</span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span>
 <span class="linenos"> 7</span>
 <span class="linenos"> 8</span><span class="w"> </span><span class="cp">#define BUFFER_MAX 2048</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[]){</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">proto</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">str_len</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="n">BUFFER_MAX</span><span class="p">];</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ethernet_head</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ip_head</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">   </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[]){</span>
+<span class="linenos">11</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">proto</span><span class="p">;</span>
+<span class="linenos">13</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">str_len</span><span class="p">;</span>
+<span class="linenos">14</span><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="n">BUFFER_MAX</span><span class="p">];</span>
+<span class="linenos">15</span><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ethernet_head</span><span class="p">;</span>
+<span class="linenos">16</span><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ip_head</span><span class="p">;</span>
+<span class="linenos">17</span><span class="w">   </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
 <span class="linenos">18</span>
-<span class="linenos">19</span><span class="w">   </span><span class="k">if</span><span class="p">((</span><span class="n">fd</span><span class="o">=</span><span class="n">socket</span><span class="p">(</span><span class="n">PF_PACKET</span><span class="p">,</span><span class="n">SOCK_RAW</span><span class="p">,</span><span class="n">htons</span><span class="p">(</span><span class="n">ETH_P_ALL</span><span class="p">)))</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;error create raw socket</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">   </span><span class="k">if</span><span class="p">((</span><span class="n">fd</span><span class="o">=</span><span class="n">socket</span><span class="p">(</span><span class="n">PF_PACKET</span><span class="p">,</span><span class="n">SOCK_RAW</span><span class="p">,</span><span class="n">htons</span><span class="p">(</span><span class="n">ETH_P_ALL</span><span class="p">)))</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">){</span>
+<span class="linenos">20</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;error create raw socket</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="linenos">21</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="linenos">22</span><span class="w">   </span><span class="p">}</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span><span class="w">   </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">     </span><span class="n">str_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvfrom</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buffer</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">   </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+<span class="linenos">25</span><span class="w">     </span><span class="n">str_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvfrom</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buffer</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="nb">NULL</span><span class="p">);</span>
 <span class="linenos">26</span>
 <span class="linenos">27</span><span class="w">     </span><span class="c1">// 请思考，此处为什么要丢弃小于42字节的包？</span>
-<span class="linenos">28</span><span class="w">     </span><span class="k">if</span><span class="p">(</span><span class="n">str_len</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">42</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">     </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;error when recv msg </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">     </span><span class="k">if</span><span class="p">(</span><span class="n">str_len</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">42</span><span class="p">)</span>
+<span class="linenos">29</span><span class="w">     </span><span class="p">{</span>
+<span class="linenos">30</span><span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;error when recv msg </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="linenos">31</span><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="linenos">32</span><span class="w">     </span><span class="p">}</span>
 <span class="linenos">33</span>
-<span class="linenos">34</span><span class="w">     </span><span class="n">ethernet_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ethernet_head</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Src MAC address: %.2x:%02x:%02x:%02x:%02x:%02x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">       </span><span class="n">p</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">11</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">     </span><span class="n">ethernet_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="linenos">35</span><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ethernet_head</span><span class="p">;</span>
+<span class="linenos">36</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Src MAC address: %.2x:%02x:%02x:%02x:%02x:%02x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="linenos">37</span><span class="w">       </span><span class="n">p</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">11</span><span class="p">]);</span>
 <span class="linenos">38</span>
-<span class="linenos">39</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dst MAC address: %.2x:%02x:%02x:%02x:%02x:%02x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">       </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">     </span><span class="n">ip_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ethernet_head</span><span class="o">+</span><span class="mi">14</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ip_head</span><span class="o">+</span><span class="mi">12</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Src IP: %d.%d.%d.%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dst IP: %d.%d.%d.%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">7</span><span class="p">]);</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">     </span><span class="n">proto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ip_head</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ip_head</span><span class="w"> </span><span class="o">+</span><span class="mi">12</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Protocol:&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">     </span><span class="k">switch</span><span class="p">(</span><span class="n">proto</span><span class="p">){</span><span class="w"></span>
-<span class="linenos">49</span><span class="w">       </span><span class="k">case</span><span class="w"> </span><span class="no">IPPROTO_ICMP</span><span class="p">:</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;icmp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">50</span><span class="w">       </span><span class="k">case</span><span class="w"> </span><span class="no">IPPROTO_TCP</span><span class="p">:</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;tcp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">       </span><span class="k">case</span><span class="w"> </span><span class="no">IPPROTO_UDP</span><span class="p">:</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;udp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">52</span><span class="w">       </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
-<span class="linenos">53</span><span class="w">       </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">54</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">55</span><span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">56</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">57</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dst MAC address: %.2x:%02x:%02x:%02x:%02x:%02x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="linenos">40</span><span class="w">       </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="linenos">41</span><span class="w">     </span><span class="n">ip_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ethernet_head</span><span class="o">+</span><span class="mi">14</span><span class="p">;</span>
+<span class="linenos">42</span><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ip_head</span><span class="o">+</span><span class="mi">12</span><span class="p">;</span>
+<span class="linenos">43</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Src IP: %d.%d.%d.%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="linenos">44</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dst IP: %d.%d.%d.%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">7</span><span class="p">]);</span>
+<span class="linenos">45</span><span class="w">     </span><span class="n">proto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ip_head</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+<span class="linenos">46</span><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ip_head</span><span class="w"> </span><span class="o">+</span><span class="mi">12</span><span class="p">;</span>
+<span class="linenos">47</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Protocol:&quot;</span><span class="p">);</span>
+<span class="linenos">48</span><span class="w">     </span><span class="k">switch</span><span class="p">(</span><span class="n">proto</span><span class="p">){</span>
+<span class="linenos">49</span><span class="w">       </span><span class="k">case</span><span class="w"> </span><span class="no">IPPROTO_ICMP</span><span class="p">:</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;icmp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+<span class="linenos">50</span><span class="w">       </span><span class="k">case</span><span class="w"> </span><span class="no">IPPROTO_TCP</span><span class="p">:</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;tcp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+<span class="linenos">51</span><span class="w">       </span><span class="k">case</span><span class="w"> </span><span class="no">IPPROTO_UDP</span><span class="p">:</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;udp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+<span class="linenos">52</span><span class="w">       </span><span class="k">default</span><span class="o">:</span>
+<span class="linenos">53</span><span class="w">       </span><span class="k">break</span><span class="p">;</span>
+<span class="linenos">54</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">55</span><span class="w">   </span><span class="p">}</span>
+<span class="linenos">56</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="linenos">57</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Step1</strong> ：在Linux系统上编译该程序：</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"> $ </span>gcc socket_dump.c ‒o socket_dump
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"> $ </span>gcc<span class="w"> </span>socket_dump.c<span class="w"> </span>‒o<span class="w"> </span>socket_dump
 </pre></div>
 </div>
 <p><strong>Step2</strong> ：编译成功之后运行 (运行时需要 root 权限)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"> $ </span>sudo ./socket_dump
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"> $ </span>sudo<span class="w"> </span>./socket_dump
 </pre></div>
 </div>
 <p><strong>Step3</strong> ：在linux系统命令行上 ping www.baidu.com，socket_dump.c 程序输出如下：</p>
@@ -330,7 +330,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

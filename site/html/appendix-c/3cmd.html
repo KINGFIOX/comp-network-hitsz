@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>网络设备操作基础 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/js/baidu-tongji.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="附录 D：邮件客户端实验环境" href="../appendix-d/index.html" />
+    <link rel="prev" title="实验硬件设备简介" href="2dev.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">实验</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lab0/index.html">计算机网络实验概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab4/index.html">Lab1：VLAN 与接口模式配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab2/index.html">Lab2：协议栈之Eth协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/index.html">Lab3：协议栈之ARP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab8/index.html">Lab4：RIP路由配置及协议分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">附录 C：网络实验室环境及设备简介</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1labintro.html">网络实验室简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2dev.html">实验硬件设备简介</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">网络设备操作基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">视图的概念</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">常用的命令行视图及进入方式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">退出当前命令行视图</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">命令的结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">编辑命令行</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">不完整关键字输入</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tab">tab键的使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">使用命令行的帮助功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">常用配置命令</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">附录 C：网络实验室环境及设备简介</a> &raquo;</li>
+      <li>网络设备操作基础</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendix-c/3cmd.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>网络设备操作基础<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
+<section id="id2">
+<h2>视图的概念<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<img alt="../_images/huawei-1.png" class="align-center" src="../_images/huawei-1.png" />
+<p>华为网络设备提供了丰富的功能，相应地提供了多样的配置和查询命令。为便于用户使用这些命令，华为设备按功能分类将命令分别注册在不同的命令行视图（View）下。配置某一功能时，需首先进入对应的命令行视图，然后执行相应的命令进行配置。视图的定义使得命令行的配置更模块化也更严谨、更层次化。</p>
+<section id="id3">
+<h3>常用的命令行视图及进入方式<a class="headerlink" href="#id3" title="永久链接至标题"></a></h3>
+<p>（1）     用户视图</p>
+<p>登陆设备后，直接进入用户模式，只能执行少量查看配置的命令；例如查看设备信息：display version，显示当前配置：display current-configuration.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>&lt;Huawei&gt;
+</pre></div>
+</div>
+<p>（2）     视图模式</p>
+<p>用户模式下，输入system-view进入视图模式，可执行设备全局配置的命令。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>&lt;Huawei&gt;system-view
+<span class="linenos">2</span>Enter<span class="w"> </span>system<span class="w"> </span>view,<span class="w"> </span><span class="k">return</span><span class="w"> </span>user<span class="w"> </span>view<span class="w"> </span>with<span class="w"> </span>Ctrl+Z.
+<span class="linenos">3</span><span class="o">[</span>Huawei<span class="o">]</span>
+</pre></div>
+</div>
+<p>（3）     局部配置模式</p>
+<p>视图模式下，输入局部配置命令，如interface g0/0/1，进入G0/0/1端口配置模式。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="o">[</span>Huawei<span class="o">]</span>int<span class="w"> </span>g0/0/1
+<span class="linenos">2</span><span class="o">[</span>Huawei-GigabitEthernet0/0/1<span class="o">]</span>
+</pre></div>
+</div>
+<p>此外局部配置模式有很多种，可根据不同需求进入vlan配置模式、端口聚合配置模式等，可输入？，查看当前模式下，能执行哪些命令。</p>
+</section>
+<section id="id4">
+<h3>退出当前命令行视图<a class="headerlink" href="#id4" title="永久链接至标题"></a></h3>
+<p>执行quit命令，即可从当前视图退出至上一层视图。</p>
+</section>
+</section>
+<section id="id5">
+<h2>命令的结构<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<img alt="../_images/huawei-2.png" class="align-center" src="../_images/huawei-2.png" />
+<p>在命令行界面中，通过输入特定的命令及参数来完成对设备的调试。例如上面的例子中“sysname Router1”这条命令，“sysname”是关键字，“Router1”是参数，这条命令的意思是将该设备的名称修改为Router1，命令输入后按回车，会发现系统的提示符发生了改变，变成了“[Router1]”。</p>
+</section>
+<section id="id6">
+<h2>编辑命令行<a class="headerlink" href="#id6" title="永久链接至标题"></a></h2>
+<section id="id7">
+<h3>不完整关键字输入<a class="headerlink" href="#id7" title="永久链接至标题"></a></h3>
+<p>华为设备支持不完整关键字输入。例如display current-configuration命令，可以输入d cu，di cu或dis cu等都可以执行此命令，但不能输入d c或dis c等，因此以d c、dis c开头的命令不唯一。</p>
+</section>
+<section id="tab">
+<h3>tab键的使用<a class="headerlink" href="#tab" title="永久链接至标题"></a></h3>
+<p>输入不完整的关键字后按下Tab键，系统自动补全关键字。</p>
+</section>
+<section id="id8">
+<h3>使用命令行的帮助功能<a class="headerlink" href="#id8" title="永久链接至标题"></a></h3>
+<p>当一条命令中某个关键字只记得开头的几个字母时，可在键入开头字母后紧接着键入“?”，例如，“ip rou?”，系统即会自动弹出提示信息，提示当前“rou”开头的关键字有哪些。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="o">[</span>Huawei<span class="o">]</span>ip<span class="w"> </span>rou?
+<span class="linenos">2</span>route<span class="w">             </span>&lt;Group&gt;<span class="w"> </span>route<span class="w"> </span><span class="nb">command</span><span class="w"> </span>Group
+<span class="linenos">3</span>route-static<span class="w">      </span>IPv4<span class="w"> </span>static<span class="w"> </span>routes
+</pre></div>
+</div>
+<p>在当前关键字后键入空格，然后再输入“?”，系统会自动弹出可选关键字或参数的提示信息。</p>
+</section>
+<section id="id9">
+<h3>常用配置命令<a class="headerlink" href="#id9" title="永久链接至标题"></a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">   </span>&lt;Huawei&gt;system-view<span class="w">  </span>//<span class="w"> </span>由用户视图进入系统系统
+<span class="linenos"> 2</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>ping<span class="w">  </span>//测试网络连通性
+<span class="linenos"> 3</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>reboot<span class="w"> </span>//重启交换机/路由器
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>interface<span class="w">  </span>//查看路由器的接口状态
+<span class="linenos"> 6</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>ip<span class="w"> </span>interface<span class="w">  </span>//查看接口与IP相关的信息
+<span class="linenos"> 7</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>ip<span class="w"> </span>interface<span class="w"> </span>brief<span class="w">  </span>//查看接口状态
+<span class="linenos"> 8</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>ip<span class="w"> </span>routing-table<span class="w">  </span>//查看路由表
+<span class="linenos"> 9</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>vlan<span class="w">  </span>//查看vlan信息
+<span class="linenos">10</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>port<span class="w"> </span>vlan<span class="w">  </span>//查看端口vlan信息
+<span class="linenos">11</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>current-configuration<span class="w">  </span>//查看运行的配置文件
+<span class="linenos">12</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>display<span class="w"> </span>interface<span class="w"> </span>Gigabitethernet<span class="w"> </span><span class="m">0</span>/1<span class="w"> </span>//显示以太网端口g0/0/1<span class="w"> </span>的信息
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>interface<span class="w"> </span>Gigabitethernet<span class="w"> </span><span class="m">0</span>/0/1<span class="w"> </span>//进入以太网端口g0/0/1视图
+<span class="linenos">15</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>shutdown<span class="w"> </span>//关闭以太网端口
+<span class="linenos">16</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>undo<span class="w"> </span>shutdown<span class="w"> </span>//打开以太网端口
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>port<span class="w"> </span>link-type<span class="w"> </span>access<span class="w"> </span>//设置端口为<span class="w"> </span>Access<span class="w"> </span>端口
+<span class="linenos">19</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>port<span class="w"> </span>link-type<span class="w"> </span>hybrid<span class="w"> </span>//设置端口为<span class="w"> </span>Hybrid<span class="w"> </span>端口
+<span class="linenos">20</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>port<span class="w"> </span>link-type<span class="w"> </span>trunk<span class="w"> </span>//设置端口为<span class="w"> </span>Trunk<span class="w"> </span>端口
+<span class="linenos">21</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>undo<span class="w"> </span>port<span class="w"> </span>link-type<span class="w"> </span>//恢复端口的链路类型为缺省的<span class="w"> </span>Access<span class="w"> </span>端口
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">   </span><span class="o">[</span>Huawei-Gigabitethernet0/0/1<span class="o">]</span>quit<span class="w"> </span>//从端口视图退出到系统视图
+<span class="linenos">24</span><span class="w">   </span><span class="o">[</span>Huawei<span class="o">]</span>quit<span class="w"> </span>//从系统视图退出到用户视图
+<span class="linenos">25</span><span class="w">   </span>&lt;Huawei&gt;
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2dev.html" class="btn btn-neutral float-left" title="实验硬件设备简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../appendix-d/index.html" class="btn btn-neutral float-right" title="附录 D：邮件客户端实验环境" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, qiu.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

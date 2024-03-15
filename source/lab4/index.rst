@@ -10,6 +10,7 @@ Lab1：VLAN 与接口模式配置
    :titlesonly:
    :numbered:
 
-   1cisco
+   0huawei
+..   1cisco
 ..   0intro
    1cisco

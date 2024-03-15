@@ -127,7 +127,16 @@ UDP自测需要通过main测试。
 
 eth.addr == XX.XX.XX.XX 
 
-XX.XX.XX.XX 是你自己的虚拟网卡MAC地址
+XX.XX.XX.XX 是自定义虚拟网卡的MAC地址，详见include/config.h头文件。
+
+.. code-block:: c
+   :linenos:
+
+    #define NET_IF_MAC                      \
+        {                                      \
+            0x00, 0x11, 0x22, 0x33, 0x44, 0x55 \
+        } //自定义网卡mac地址
+
 
 .. image:: cmake3.png
 

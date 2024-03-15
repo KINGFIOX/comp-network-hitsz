@@ -129,10 +129,10 @@ Cisco网络设备的常用配置命令
 
 以交换机设备为例：
 
-.. code-block:: sh
+.. code-block:: bash
    :linenos:
    
-   Switch>  //用户模式的提示符是">""
+   Switch>  //用户模式的提示符是">"
 
    Switch>enable   //进入交换机特权模式
    Switch#         //特权模式的提示符是“#”

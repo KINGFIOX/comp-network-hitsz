@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. 实验探索指南 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>2. 实验探索指南 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -56,7 +56,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -64,11 +64,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -77,7 +77,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -100,7 +100,7 @@
 <h1><span class="section-number">2. </span>实验探索指南<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>当我们在浏览器输入网址，到屏幕上能显示出网页的内容，在这个过程中，虽然只有短短几秒钟，背后需要有数量庞大的硬件和软件相互配合才能完成这一系列的工作。为了带领大家探索这一系列过程，本课程实验选取了9个网络小实验，关注网络连接过程中较为典型的某几个环节，希望能让大家见一叶能知深秋，窥一斑而见全豹，从而对巨大而复杂的计算机网络全貌有一个较为深入全面的认识。</p>
+<p>当你在浏览器输入网址并按下回车，直到网页内容显示在屏幕上，在这个过程中，虽然只有短短几秒钟，背后涉及了众多硬件和软件的协同工作。为了带领大家探索这一系列过程，本课程实验选取了9个网络小实验，关注网络连接过程中较为典型的某几个环节，希望能让大家见一叶能知深秋，从而对计算机网络全貌有一个更为全面和深入的认识，帮助大家更好地理解网络世界的奥秘。</p>
 <img alt="../_images/网络全貌3.png" src="../_images/网络全貌3.png" />
 <p>上图是实验的路线图（如果你在做实验过程中迷失了方向，可以回过头来看一看这张地图）。</p>
 <p>当我们访问Web服务器，或者通过邮件客户端发送邮件时，客户端的web/邮件应用程序和服务器之间就会有一系列的交互。以浏览器访问web服务器为例，主要的交互信息如下：</p>
@@ -133,7 +133,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

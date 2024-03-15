@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>附录 C：Cisco Packet Tracer简介 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>附录 C：网络实验室环境及设备简介 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="网络模拟器简介" href="0cisco-stu.html" />
+    <link rel="next" title="网络实验室简介" href="1labintro.html" />
     <link rel="prev" title="2. Linux开发环境搭建" href="../appendix-b/2linux.html" /> 
 </head>
 
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -58,14 +58,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">附录 C：Cisco Packet Tracer简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="0cisco-stu.html">网络模拟器简介</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">附录 C：网络实验室环境及设备简介</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1labintro.html">网络实验室简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2dev.html">实验硬件设备简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3cmd.html">网络设备操作基础</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题</a></li>
 </ul>
 
         </div>
@@ -74,7 +76,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -82,7 +84,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>附录 C：Cisco Packet Tracer简介</li>
+      <li>附录 C：网络实验室环境及设备简介</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/appendix-c/index.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -92,17 +94,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="c-cisco-packet-tracer">
-<h1>附录 C：Cisco Packet Tracer简介<a class="headerlink" href="#c-cisco-packet-tracer" title="永久链接至标题"></a></h1>
+  <section id="c">
+<h1>附录 C：网络实验室环境及设备简介<a class="headerlink" href="#c" title="永久链接至标题"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="0cisco-stu.html">网络模拟器简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="0cisco-stu.html#cisco-packet-tracer">Cisco Packet Tracer 模拟器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0cisco-stu.html#id2">网络设备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="0cisco-stu.html#id3">交换机</a></li>
-<li class="toctree-l3"><a class="reference internal" href="0cisco-stu.html#id4">路由器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="0cisco-stu.html#id5">网络设备的配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="0cisco-stu.html#cisco">Cisco网络设备的常用配置命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1labintro.html">网络实验室简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2dev.html">实验硬件设备简介</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2dev.html#id2">交换机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2dev.html#id3">路由器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2dev.html#id4">交换机和路由器的接口</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3cmd.html">网络设备操作基础</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3cmd.html#id2">视图的概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3cmd.html#id3">常用的命令行视图及进入方式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3cmd.html#id4">退出当前命令行视图</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3cmd.html#id5">命令的结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3cmd.html#id6">编辑命令行</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3cmd.html#id7">不完整关键字输入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3cmd.html#tab">tab键的使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3cmd.html#id8">使用命令行的帮助功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3cmd.html#id9">常用配置命令</a></li>
 </ul>
 </li>
 </ul>
@@ -116,13 +130,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../appendix-b/2linux.html" class="btn btn-neutral float-left" title="2. Linux开发环境搭建" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="0cisco-stu.html" class="btn btn-neutral float-right" title="网络模拟器简介" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="1labintro.html" class="btn btn-neutral float-right" title="网络实验室简介" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

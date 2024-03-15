@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Debian搭建邮件服务器 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>2. Debian搭建邮件服务器 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -58,7 +58,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">附录 D：邮件客户端实验环境</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1ubuntu.html">1. Ubuntu搭建邮件服务器</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2. Debian搭建邮件服务器</a><ul>
@@ -73,7 +73,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -82,7 +82,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -113,7 +113,7 @@
 <h2><span class="section-number">2.2. </span>配置postfix和sasl认证<a class="headerlink" href="#postfixsasl" title="永久链接至标题"></a></h2>
 <p>参考 <a class="reference external" href="https://blog.csdn.net/zubin006/article/details/2311619">https://blog.csdn.net/zubin006/article/details/2311619</a></p>
 <p>安装postfix和cyrus-sasl软件包</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"># </span>apt install sasl2-bin libsasl2-modules postfix
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"># </span>apt<span class="w"> </span>install<span class="w"> </span>sasl2-bin<span class="w"> </span>libsasl2-modules<span class="w"> </span>postfix
 </pre></div>
 </div>
 <p>安装postfix时会出现向导，只需将所有选项设置为默认即可。
@@ -121,7 +121,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="go">This needs to be uncommented before saslauthd will be run automatically</span>
 <span class="linenos">2</span><span class="go">START=yes</span>
 <span class="linenos">3</span>
-<span class="linenos">4</span><span class="gp"># </span>You must specify the authentication mechanisms you wish to use.
+<span class="linenos">4</span><span class="gp"># </span>You<span class="w"> </span>must<span class="w"> </span>specify<span class="w"> </span>the<span class="w"> </span>authentication<span class="w"> </span>mechanisms<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>use.
 <span class="linenos">5</span><span class="go">…</span>
 </pre></div>
 </div>
@@ -135,31 +135,31 @@
 </pre></div>
 </div>
 <p>在/etc/postfix/main.cf末尾添加这些配置（直接用vi或者nano修改文件），使其使用 SMTP AUTH 及 SASL Authenticate：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nv">smtpd_sasl_auth_enable</span> <span class="o">=</span> yes
-<span class="linenos">2</span><span class="nv">broken_sasl_auth_clients</span> <span class="o">=</span> yes
-<span class="linenos">3</span><span class="nv">smtpd_sasl_security_options</span> <span class="o">=</span> noanonymous
-<span class="linenos">4</span><span class="nv">smtpd_recipient_restrictions</span> <span class="o">=</span> permit_sasl_authenticated, permit_mynetworks, check_relay_domains,    reject_unauth_destination
-<span class="linenos">5</span><span class="nv">smtpd_client_restrictions</span> <span class="o">=</span> permit_sasl_authenticated
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nv">smtpd_sasl_auth_enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>yes
+<span class="linenos">2</span><span class="nv">broken_sasl_auth_clients</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>yes
+<span class="linenos">3</span><span class="nv">smtpd_sasl_security_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>noanonymous
+<span class="linenos">4</span><span class="nv">smtpd_recipient_restrictions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>permit_sasl_authenticated,<span class="w"> </span>permit_mynetworks,<span class="w"> </span>check_relay_domains,<span class="w">    </span>reject_unauth_destination
+<span class="linenos">5</span><span class="nv">smtpd_client_restrictions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>permit_sasl_authenticated
 </pre></div>
 </div>
 <p>打开/etc/postfix/master.cf，让postfix不要以chroot启动：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># service type  private unpriv  chroot  wakeup  maxproc command + args</span>
 <span class="linenos">2</span><span class="c1">#               (yes)   (yes)   (yes)   (never) (100)</span>
 <span class="linenos">3</span><span class="c1"># ==========================================================================</span>
-<span class="linenos">4</span>smtp      inet  n       -       n       -       -       smtpd -v
+<span class="linenos">4</span>smtp<span class="w">      </span>inet<span class="w">  </span>n<span class="w">       </span>-<span class="w">       </span>n<span class="w">       </span>-<span class="w">       </span>-<span class="w">       </span>smtpd<span class="w"> </span>-v
 </pre></div>
 </div>
 <p>重启SASL Daemon：</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span>/etc/init.d/saslauthd restart
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span>/etc/init.d/saslauthd<span class="w"> </span>restart
 </pre></div>
 </div>
 <p>跑起来后，可以用</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"># </span>/usr/sbin/testsaslauthd -u username -p password
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"># </span>/usr/sbin/testsaslauthd<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span>-p<span class="w"> </span>password
 </pre></div>
 </div>
 <p>来测试saslauthd是否正常运作。参数输入的是登录所用的用户名和密码。
 重新启动postfix：</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span>/etc/init.d/postfix restart
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span>/etc/init.d/postfix<span class="w"> </span>restart
 </pre></div>
 </div>
 </section>
@@ -173,7 +173,7 @@
 <h2><span class="section-number">2.4. </span>Thunderbird与用户配置<a class="headerlink" href="#thunderbird" title="永久链接至标题"></a></h2>
 <p>Thunderbird是一个流行的开源邮件客户端。本实验中，我们可以用它来查看或收发邮件。
 首先，安装Thunderbird：</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"># </span>apt install thunderbird
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp"># </span>apt<span class="w"> </span>install<span class="w"> </span>thunderbird
 </pre></div>
 </div>
 <p>安装好后，启动Thunderbird。输入你的名字、邮箱地址和口令。名字可以随便取，邮箱地址的格式是：系统用户名&#64;主机名。口令是登录口令。</p>
@@ -200,7 +200,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

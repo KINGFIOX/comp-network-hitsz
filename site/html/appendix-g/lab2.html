@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Lab2 常见问题（Eth） &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>1. Lab2 常见问题（Eth） &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="3. Lab3 常见问题（ARP）" href="lab3.html" />
-    <link rel="prev" title="1. Lab1 常见问题（VLAN）" href="lab1.html" /> 
+    <link rel="next" title="2. Lab3 常见问题（ARP）" href="lab3.html" />
+    <link rel="prev" title="常见问题（往届问题）" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -58,22 +58,22 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">常见问题（2022）</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="lab1.html">1. Lab1 常见问题（VLAN）</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Lab2 常见问题（Eth）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">2.1. 进行环境配置时，选择编译器后报错？</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cmaketdm-gcc-vscodecmake">2.2. 安装完CMAKE和TDM GCC后，VSCode的CMAKE上找不到项目的可执行程序？</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cmake">2.3. CMake报错</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ctest">2.4. ctest运行报错</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cmake-gdb">2.5. 能用CMAKE编译，不能用GDB调试？</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">常见问题（往届问题）</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Lab2 常见问题（Eth）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.1. 进行环境配置时，选择编译器后报错？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmaketdm-gcc-vscodecmake">1.2. 安装完CMAKE和TDM GCC后，VSCode的CMAKE上找不到项目的可执行程序？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmake">1.3. CMake报错</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctest">1.4. ctest运行报错</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmake-gdb">1.5. 能用CMAKE编译，不能用GDB调试？</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="lab3.html">3. Lab3 常见问题（ARP）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lab7.html">4. Lab7 常见问题（UDP）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab3.html">2. Lab3 常见问题（ARP）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab7.html">3. Lab7 常见问题（UDP）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab9.html">4. Lab9 常见问题（MAIL）</a></li>
 </ul>
 </li>
 </ul>
@@ -84,7 +84,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -92,8 +92,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">常见问题（2022）</a> &raquo;</li>
-      <li><span class="section-number">2. </span>Lab2 常见问题（Eth）</li>
+          <li><a href="index.html">常见问题（往届问题）</a> &raquo;</li>
+      <li><span class="section-number">1. </span>Lab2 常见问题（Eth）</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/appendix-g/lab2.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -104,11 +104,11 @@
            <div itemprop="articleBody">
              
   <section id="lab2-eth">
-<h1><span class="section-number">2. </span>Lab2 常见问题（Eth）<a class="headerlink" href="#lab2-eth" title="永久链接至标题"></a></h1>
+<h1><span class="section-number">1. </span>Lab2 常见问题（Eth）<a class="headerlink" href="#lab2-eth" title="永久链接至标题"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="id1">
-<h2><span class="section-number">2.1. </span>进行环境配置时，选择编译器后报错？<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2><span class="section-number">1.1. </span>进行环境配置时，选择编译器后报错？<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
 <p>如下图所示</p>
 <img alt="../_images/lab2-12.png" src="../_images/lab2-12.png" />
 <p>解决方案：
@@ -121,26 +121,26 @@
 <img alt="../_images/lab2-15.png" src="../_images/lab2-15.png" />
 </section>
 <section id="cmaketdm-gcc-vscodecmake">
-<h2><span class="section-number">2.2. </span>安装完CMAKE和TDM GCC后，VSCode的CMAKE上找不到项目的可执行程序？<a class="headerlink" href="#cmaketdm-gcc-vscodecmake" title="永久链接至标题"></a></h2>
+<h2><span class="section-number">1.2. </span>安装完CMAKE和TDM GCC后，VSCode的CMAKE上找不到项目的可执行程序？<a class="headerlink" href="#cmaketdm-gcc-vscodecmake" title="永久链接至标题"></a></h2>
 <p>如下图所示，找不到项目的可执行程序。</p>
 <a class="reference internal image-reference" href="../_images/lab2.png"><img alt="../_images/lab2.png" src="../_images/lab2.png" style="width: 235.0px; height: 291.0px;" /></a>
 <p>首先，你需要先检查 “C:\Users\你自己电脑的用户名\AppData\Local\CMakeTools\CMakeTools-tools-kits.json”文件，该文件正常的配置应该如下图所示。</p>
 <img alt="../_images/lab2-2.png" src="../_images/lab2-2.png" />
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GCC 10.3.0 x86_64-w64-mingw32&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&quot;compilers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;C&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-gcc.exe&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;CXX&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe&quot;</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&quot;preferredGenerator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MinGW Makefiles&quot;</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">    </span><span class="nt">&quot;environmentVariables&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;CMT_MINGW_PATH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin&quot;</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">15</span><span class="p">]</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GCC 10.3.0 x86_64-w64-mingw32&quot;</span><span class="p">,</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&quot;compilers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;C&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-gcc.exe&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;CXX&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe&quot;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&quot;preferredGenerator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MinGW Makefiles&quot;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&quot;environmentVariables&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;CMT_MINGW_PATH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\TDM-GCC-64\\bin&quot;</span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">14</span><span class="w">  </span><span class="p">}</span>
+<span class="linenos">15</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>如果你电脑中该文件的gcc不一样，比如是C:\TDM-GCC-64\bin\gcc.exe。你可以参考以下步骤来修改：</p>
@@ -154,7 +154,7 @@
 <p>如果还不行，删掉本工程目录下的.vscode\settings.json文件，再重新扫描[Scan for kits]。</p>
 </section>
 <section id="cmake">
-<h2><span class="section-number">2.3. </span>CMake报错<a class="headerlink" href="#cmake" title="永久链接至标题"></a></h2>
+<h2><span class="section-number">1.3. </span>CMake报错<a class="headerlink" href="#cmake" title="永久链接至标题"></a></h2>
 <p>CMake报错的情况以下几种情况：</p>
 <p>1、首先参考上一题的解决方案，先确保GCC是选对了。</p>
 <p>2、检测一下你的工程目录是不是实验包的根目录。</p>
@@ -165,12 +165,12 @@
 <p>同学们可以自行检查。</p>
 </section>
 <section id="ctest">
-<h2><span class="section-number">2.4. </span>ctest运行报错<a class="headerlink" href="#ctest" title="永久链接至标题"></a></h2>
+<h2><span class="section-number">1.4. </span>ctest运行报错<a class="headerlink" href="#ctest" title="永久链接至标题"></a></h2>
 <p>如果出现下图的情况，一般是代码有段错误了，可以用GDB跟踪调试。</p>
 <img alt="../_images/lab2-9.png" src="../_images/lab2-9.png" />
 </section>
 <section id="cmake-gdb">
-<h2><span class="section-number">2.5. </span>能用CMAKE编译，不能用GDB调试？<a class="headerlink" href="#cmake-gdb" title="永久链接至标题"></a></h2>
+<h2><span class="section-number">1.5. </span>能用CMAKE编译，不能用GDB调试？<a class="headerlink" href="#cmake-gdb" title="永久链接至标题"></a></h2>
 <p>本题的解决方法来源于某位同学的分享，非常感谢这位乐于分享的同学！</p>
 <p>如下图，能编译，但GDB调试不了。</p>
 <img alt="../_images/lab2-10.png" src="../_images/lab2-10.png" />
@@ -186,14 +186,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="lab1.html" class="btn btn-neutral float-left" title="1. Lab1 常见问题（VLAN）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="lab3.html" class="btn btn-neutral float-right" title="3. Lab3 常见问题（ARP）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="常见问题（往届问题）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="lab3.html" class="btn btn-neutral float-right" title="2. Lab3 常见问题（ARP）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

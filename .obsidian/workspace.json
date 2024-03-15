@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "65cf22e19f0d69c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "503b9bbcff0e3dc1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8ad90ccb8ee4917",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "source/lab7/cmake.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c196ba7a34434233",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8949ed4d447197e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e211a0294756cd7d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4fc520d4c11f4e6b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3c4840126320dc52",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bac8158af5e2e8a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "638c842a0442e740",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e53c0c277d9aea44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/lab7/cmake.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "86e7a5cb445fb50d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "source/lab7/cmake.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8d46cd2aa2dbd639",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f0213f6d6814ac52",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/lab7/cmake.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "e211a0294756cd7d",
+  "lastOpenFiles": [
+    "source/lab0/网络全貌3.png",
+    "source/lab0/提交1.png",
+    "source/lab0/实验安排.png"
+  ]
+}

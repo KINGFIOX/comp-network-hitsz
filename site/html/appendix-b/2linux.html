@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Linux开发环境搭建 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>2. Linux开发环境搭建 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="附录 C：Cisco Packet Tracer简介" href="../appendix-c/index.html" />
+    <link rel="next" title="附录 C：网络实验室环境及设备简介" href="../appendix-c/index.html" />
     <link rel="prev" title="1. Windows开发环境搭建" href="1win.html" /> 
 </head>
 
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -65,11 +65,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -78,7 +78,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -103,16 +103,21 @@
 <p class="admonition-title">备注</p>
 <p>Linux与Windows开发环境大同小异，选择Linux开发环境的同学，也可以先看看Windows开发环境的搭建过程。</p>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p><strong>不要使用OS实验的Linux远程实验平台来做计算机网络实验</strong> ，你没有root权限，无法直接捕获远程实验平台网络设备，以访问网络接口和底层数据。</p>
+<p>建议使用你自己电脑中的Linux系统（可以是虚拟机），也可以使用实验室电脑的Linux系统来完成实验。</p>
+</div>
 <p>为了简化环境，避免其他无关细节的干扰，如路由器、交换机等等，Linux网络编程实验环境是在一台物理计算机和Ubuntu虚拟机环境（也可以采用其他的Linux虚拟机环境）下进行。</p>
-<p>网络实验室提供有已经安装好的Ubuntu虚拟机环境，如果你想在自己的电脑上进行编译调试，那么你需要自行安装Linux虚拟机环境，虚拟机网络适配器选择为 NAT 模式。</p>
+<p>你需要自行安装Linux虚拟机环境，虚拟机网络适配器选择为 NAT 模式。</p>
 <img alt="../_images/虚拟机.png" src="../_images/虚拟机.png" />
 <p>那么你在安装完Ubuntu虚拟机之后，还需要安装所有可能需要的依赖：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span> sudo apt-get install git make cmake libpcap-dev openssh-server
-</span><span class="hll"><span class="linenos">2</span> sudo apt-get install libreadline-dev libncurses-dev wireshark tshark g++
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>make<span class="w"> </span>cmake<span class="w"> </span>libpcap-dev<span class="w"> </span>openssh-server
+</span><span class="hll"><span class="linenos">2</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libreadline-dev<span class="w"> </span>libncurses-dev<span class="w"> </span>wireshark<span class="w"> </span>tshark<span class="w"> </span>g++
 </span></pre></div>
 </div>
 <img alt="../_images/实验环境.png" src="../_images/实验环境.png" />
-<p>上图是给出的示例图。其示例图中，物理机和虚拟机的网络号192.168.3.0，子网掩码255.255.255.0，虚拟机的网卡IP地址192.168.163.134，确保它们处在同一个网段内。你可以根据你电脑中虚拟网卡的网络号，设置虚拟网卡的IP地址（可以和上图的IP地址不一样，你只需要确保物理计算机的网卡、虚拟机的网卡、本协议栈的虚拟网卡这三张网卡保持在同一个网段内即可）。</p>
+<p>上图是给出的示例图。其示例图中，物理机和虚拟机的网络号192.168.163.0，子网掩码255.255.255.0，虚拟机的网卡IP地址192.168.163.134，确保它们处在同一个网段内。你可以根据你电脑中虚拟网卡的网络号，设置虚拟网卡的IP地址（可以和上图的IP地址（192.168.163.103）不一样，你只需要确保物理计算机的网卡、虚拟机的网卡、本协议栈的虚拟网卡这三张网卡保持在同一个网段内即可）。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p><strong>怎么样查看IP地址？</strong></p>
@@ -156,31 +161,31 @@
 <p>如果出现调试无法启动的情况，将lauch.json 的 program 项改为 ${workspaceFolder}/build/ <strong>你要编译的程序名</strong> ，args 项也需要改成testing/data/ <strong>你要编译的程序名</strong> 。</p>
 </div>
 <p>以下是 <strong>eth_in</strong> 调试的完整的launch.json，大家可以参考下面的来修改：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">     </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">     </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">         </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">             </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(gdb) Launch&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">             </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">             </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">             </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/build/eth_in&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">             </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing/data/eth_in&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">             </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">             </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">             </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">             </span><span class="nt">&quot;externalConsole&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">             </span><span class="nt">&quot;MIMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdb&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">             </span><span class="nt">&quot;setupCommands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">                 </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">                     </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enable pretty-printing for gdb&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">                     </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-enable-pretty-printing&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">                     </span><span class="nt">&quot;ignoreFailures&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">                 </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">             </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">             </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">         </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">     </span><span class="p">]</span><span class="w"></span>
-<span class="linenos">25</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">             </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(gdb) Launch&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">             </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">             </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">             </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/build/eth_in&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">             </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;testing/data/eth_in&quot;</span><span class="p">],</span>
+<span class="linenos">10</span><span class="w">             </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">             </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">             </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="linenos">13</span><span class="w">             </span><span class="nt">&quot;externalConsole&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">             </span><span class="nt">&quot;MIMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdb&quot;</span><span class="p">,</span>
+<span class="linenos">15</span><span class="w">             </span><span class="nt">&quot;setupCommands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">16</span><span class="w">                 </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">                     </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enable pretty-printing for gdb&quot;</span><span class="p">,</span>
+<span class="linenos">18</span><span class="w">                     </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-enable-pretty-printing&quot;</span><span class="p">,</span>
+<span class="linenos">19</span><span class="w">                     </span><span class="nt">&quot;ignoreFailures&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="linenos">20</span><span class="w">                 </span><span class="p">}</span>
+<span class="linenos">21</span><span class="w">             </span><span class="p">],</span>
+<span class="linenos">22</span><span class="w">             </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span>
+<span class="linenos">23</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">24</span><span class="w">     </span><span class="p">]</span>
+<span class="linenos">25</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>关于调试方法，详见  <a class="reference internal" href="1win.html#id3"><span class="std std-ref">Eth、ARP、IP或ICMP调试</span></a></p>
@@ -192,13 +197,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="1win.html" class="btn btn-neutral float-left" title="1. Windows开发环境搭建" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="../appendix-c/index.html" class="btn btn-neutral float-right" title="附录 C：Cisco Packet Tracer简介" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../appendix-c/index.html" class="btn btn-neutral float-right" title="附录 C：网络实验室环境及设备简介" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

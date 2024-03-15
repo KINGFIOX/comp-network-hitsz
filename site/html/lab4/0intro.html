@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>实验目的 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>实验目的 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -28,7 +28,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -48,7 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proplus/index.html">附加题</a></li>
 </ul>
@@ -56,11 +56,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -69,7 +69,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -178,7 +178,7 @@
 </section>
 <section id="step2">
 <h3>Step2：<a class="headerlink" href="#step2" title="永久链接至标题"></a></h3>
-<p>在弹出的窗口中，输入需通过telnet访问的设备IP（见表 <a class="reference internal" href="../lab8/0intro.html#atm"><span class="std std-ref">ATM管理机地址表</span></a> ）和端口号，然后点击“连接”即可。（SW2的port为3004，SW3的port为3005）如图所示：</p>
+<p>在弹出的窗口中，输入需通过telnet访问的设备IP（见表 <a class="reference internal" href="0huawei.html#atm"><span class="std std-ref">ATM管理机地址表1</span></a> ）和端口号，然后点击“连接”即可。（SW2的port为3004，SW3的port为3005）如图所示：</p>
 <span id="atm"></span><table class="colwidths-given docutils align-center" id="id27">
 <caption><span class="caption-text">ATM管理机地址表</span><a class="headerlink" href="#id27" title="永久链接至表格"></a></caption>
 <colgroup>
@@ -239,9 +239,9 @@
 <section id="id10">
 <h3>Step1：<a class="headerlink" href="#id10" title="永久链接至标题"></a></h3>
 <p>在用户视图下，使用如下命令进行配置的清空</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span> &lt;Quidway&gt;reset saved-configuration //清除配置
-</span><span class="hll"><span class="linenos">2</span> The device configurations will be erased to reconfigure. Are you sure?<span class="o">(</span>y/n<span class="o">)</span>:y  //输入y继续删除
-</span><span class="hll"><span class="linenos">3</span> &lt;Quidway&gt;display saved-configuration  //查看删除后的配置
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span><span class="w"> </span>&lt;Quidway&gt;reset<span class="w"> </span>saved-configuration<span class="w"> </span>//清除配置
+</span><span class="hll"><span class="linenos">2</span><span class="w"> </span>The<span class="w"> </span>device<span class="w"> </span>configurations<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>erased<span class="w"> </span>to<span class="w"> </span>reconfigure.<span class="w"> </span>Are<span class="w"> </span>you<span class="w"> </span>sure?<span class="o">(</span>y/n<span class="o">)</span>:y<span class="w">  </span>//输入y继续删除
+</span><span class="hll"><span class="linenos">3</span><span class="w"> </span>&lt;Quidway&gt;display<span class="w"> </span>saved-configuration<span class="w">  </span>//查看删除后的配置
 </span></pre></div>
 </div>
 <img alt="../_images/2-41.jpg" src="../_images/2-41.jpg" />
@@ -249,10 +249,10 @@
 <section id="id11">
 <h3>Step2：<a class="headerlink" href="#id11" title="永久链接至标题"></a></h3>
 <p>在用户视图下，使用如下命令清空配置，并进行重启</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>&lt;Quidway&gt;reboot  //重启
-</span><span class="hll"><span class="linenos">2</span>All the configuration will be saved to the next startup configuration. Continue? <span class="o">[</span>y/n<span class="o">]</span>:n  //输入n不保存到启动配置
-</span><span class="hll"><span class="linenos">3</span>System will reboot! Continue? <span class="o">[</span>y/n<span class="o">]</span>:  //输入y，继续重新启动
-</span><span class="hll"><span class="linenos">4</span>&lt;Quidway&gt;display current-configuration  //重启后查看当前配置
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>&lt;Quidway&gt;reboot<span class="w">  </span>//重启
+</span><span class="hll"><span class="linenos">2</span>All<span class="w"> </span>the<span class="w"> </span>configuration<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>saved<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>next<span class="w"> </span>startup<span class="w"> </span>configuration.<span class="w"> </span>Continue?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:n<span class="w">  </span>//输入n不保存到启动配置
+</span><span class="hll"><span class="linenos">3</span>System<span class="w"> </span>will<span class="w"> </span>reboot!<span class="w"> </span>Continue?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w">  </span>//输入y，继续重新启动
+</span><span class="hll"><span class="linenos">4</span>&lt;Quidway&gt;display<span class="w"> </span>current-configuration<span class="w">  </span>//重启后查看当前配置
 </span></pre></div>
 </div>
 <img alt="../_images/2-51.jpg" src="../_images/2-51.jpg" />
@@ -262,33 +262,33 @@
 <h2>导入设备初始配置<a class="headerlink" href="#id12" title="永久链接至标题"></a></h2>
 <p>初始配置用于关闭不需要的接口和为网络设备命名，以构建符合本实验的网络拓扑。</p>
 <p>SW2导入下列初始配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span>   system-view
-</span><span class="hll"><span class="linenos"> 2</span>   sysname SW2
-</span><span class="hll"><span class="linenos"> 3</span>   user-interface console <span class="m">0</span>
-</span><span class="hll"><span class="linenos"> 4</span>   idle-timeout <span class="m">60</span>
-</span><span class="hll"><span class="linenos"> 5</span>   quit
-</span><span class="hll"><span class="linenos"> 6</span>   int range g0/0/1 to g0/0/3
-</span><span class="hll"><span class="linenos"> 7</span>   shutdown
-</span><span class="hll"><span class="linenos"> 8</span>   quit
-</span><span class="hll"><span class="linenos"> 9</span>   int g0/0/24
-</span><span class="hll"><span class="linenos">10</span>   shutdown
-</span><span class="hll"><span class="linenos">11</span>   quit
-</span><span class="hll"><span class="linenos">12</span>   quit
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="w">   </span>system-view
+</span><span class="hll"><span class="linenos"> 2</span><span class="w">   </span>sysname<span class="w"> </span>SW2
+</span><span class="hll"><span class="linenos"> 3</span><span class="w">   </span>user-interface<span class="w"> </span>console<span class="w"> </span><span class="m">0</span>
+</span><span class="hll"><span class="linenos"> 4</span><span class="w">   </span>idle-timeout<span class="w"> </span><span class="m">60</span>
+</span><span class="hll"><span class="linenos"> 5</span><span class="w">   </span>quit
+</span><span class="hll"><span class="linenos"> 6</span><span class="w">   </span>int<span class="w"> </span>range<span class="w"> </span>g0/0/1<span class="w"> </span>to<span class="w"> </span>g0/0/3
+</span><span class="hll"><span class="linenos"> 7</span><span class="w">   </span>shutdown
+</span><span class="hll"><span class="linenos"> 8</span><span class="w">   </span>quit
+</span><span class="hll"><span class="linenos"> 9</span><span class="w">   </span>int<span class="w"> </span>g0/0/24
+</span><span class="hll"><span class="linenos">10</span><span class="w">   </span>shutdown
+</span><span class="hll"><span class="linenos">11</span><span class="w">   </span>quit
+</span><span class="hll"><span class="linenos">12</span><span class="w">   </span>quit
 </span></pre></div>
 </div>
 <p>SW3导入下列初始配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span>   system-view
-</span><span class="hll"><span class="linenos"> 2</span>   sysname SW3
-</span><span class="hll"><span class="linenos"> 3</span>   user-interface console <span class="m">0</span>
-</span><span class="hll"><span class="linenos"> 4</span>   idle-timeout <span class="m">60</span>
-</span><span class="hll"><span class="linenos"> 5</span>   quit
-</span><span class="hll"><span class="linenos"> 6</span>   int range g0/0/1 to g0/0/3
-</span><span class="hll"><span class="linenos"> 7</span>   shutdown
-</span><span class="hll"><span class="linenos"> 8</span>   quit
-</span><span class="hll"><span class="linenos"> 9</span>   int g0/0/24
-</span><span class="hll"><span class="linenos">10</span>   shutdown
-</span><span class="hll"><span class="linenos">11</span>   quit
-</span><span class="hll"><span class="linenos">12</span>   quit
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="w">   </span>system-view
+</span><span class="hll"><span class="linenos"> 2</span><span class="w">   </span>sysname<span class="w"> </span>SW3
+</span><span class="hll"><span class="linenos"> 3</span><span class="w">   </span>user-interface<span class="w"> </span>console<span class="w"> </span><span class="m">0</span>
+</span><span class="hll"><span class="linenos"> 4</span><span class="w">   </span>idle-timeout<span class="w"> </span><span class="m">60</span>
+</span><span class="hll"><span class="linenos"> 5</span><span class="w">   </span>quit
+</span><span class="hll"><span class="linenos"> 6</span><span class="w">   </span>int<span class="w"> </span>range<span class="w"> </span>g0/0/1<span class="w"> </span>to<span class="w"> </span>g0/0/3
+</span><span class="hll"><span class="linenos"> 7</span><span class="w">   </span>shutdown
+</span><span class="hll"><span class="linenos"> 8</span><span class="w">   </span>quit
+</span><span class="hll"><span class="linenos"> 9</span><span class="w">   </span>int<span class="w"> </span>g0/0/24
+</span><span class="hll"><span class="linenos">10</span><span class="w">   </span>shutdown
+</span><span class="hll"><span class="linenos">11</span><span class="w">   </span>quit
+</span><span class="hll"><span class="linenos">12</span><span class="w">   </span>quit
 </span></pre></div>
 </div>
 <p>导入信息步骤如下图所示。复制以上的代码并分别粘贴入SW2、SW3。</p>
@@ -343,10 +343,10 @@
 <h3>Step1：<a class="headerlink" href="#id13" title="永久链接至标题"></a></h3>
 <p>在SW2交换机上的系统视图下使用下列命令进行VLAN配置：</p>
 <p>SW2基本配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>system-view //进入系统视图
-</span><span class="hll"><span class="linenos">2</span>vlan <span class="m">2</span> //创建vlan <span class="m">2</span>
-</span><span class="hll"><span class="linenos">3</span>port g0/0/4 //把g0/0/4口放进vlan <span class="m">2</span>
-</span><span class="hll"><span class="linenos">4</span>port g0/0/11 //把g0/0/11口放进vlan <span class="m">2</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>system-view<span class="w"> </span>//进入系统视图
+</span><span class="hll"><span class="linenos">2</span>vlan<span class="w"> </span><span class="m">2</span><span class="w"> </span>//创建vlan<span class="w"> </span><span class="m">2</span>
+</span><span class="hll"><span class="linenos">3</span>port<span class="w"> </span>g0/0/4<span class="w"> </span>//把g0/0/4口放进vlan<span class="w"> </span><span class="m">2</span>
+</span><span class="hll"><span class="linenos">4</span>port<span class="w"> </span>g0/0/11<span class="w"> </span>//把g0/0/11口放进vlan<span class="w"> </span><span class="m">2</span>
 </span></pre></div>
 </div>
 </section>
@@ -354,10 +354,10 @@
 <h3>Step2：<a class="headerlink" href="#id14" title="永久链接至标题"></a></h3>
 <p>在SW3交换机上的系统视图下使用下列命令进行VLAN配置：</p>
 <p>SW3基本配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>system-view //进入系统视图
-</span><span class="hll"><span class="linenos">2</span>vlan <span class="m">2</span> //创建vlan <span class="m">2</span>
-</span><span class="hll"><span class="linenos">3</span>port g0/0/4 //把g0/0/4口放进vlan <span class="m">2</span>
-</span><span class="hll"><span class="linenos">4</span>port g0/0/13 //把g0/0/13口放进vlan <span class="m">2</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>system-view<span class="w"> </span>//进入系统视图
+</span><span class="hll"><span class="linenos">2</span>vlan<span class="w"> </span><span class="m">2</span><span class="w"> </span>//创建vlan<span class="w"> </span><span class="m">2</span>
+</span><span class="hll"><span class="linenos">3</span>port<span class="w"> </span>g0/0/4<span class="w"> </span>//把g0/0/4口放进vlan<span class="w"> </span><span class="m">2</span>
+</span><span class="hll"><span class="linenos">4</span>port<span class="w"> </span>g0/0/13<span class="w"> </span>//把g0/0/13口放进vlan<span class="w"> </span><span class="m">2</span>
 </span></pre></div>
 </div>
 </section>
@@ -384,9 +384,9 @@
 <h3>Step1：<a class="headerlink" href="#id16" title="永久链接至标题"></a></h3>
 <p>在SW2交换机上的系统视图下使用下列命令进行配置：</p>
 <p>SW2基本配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>vlan <span class="m">3</span> //创建vlan <span class="m">3</span>
-</span><span class="hll"><span class="linenos">2</span>port g0/0/12 //把g0/0/12口放进vlan <span class="m">3</span>
-</span><span class="hll"><span class="linenos">3</span>quit //退出至接口视图
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>vlan<span class="w"> </span><span class="m">3</span><span class="w"> </span>//创建vlan<span class="w"> </span><span class="m">3</span>
+</span><span class="hll"><span class="linenos">2</span>port<span class="w"> </span>g0/0/12<span class="w"> </span>//把g0/0/12口放进vlan<span class="w"> </span><span class="m">3</span>
+</span><span class="hll"><span class="linenos">3</span>quit<span class="w"> </span>//退出至接口视图
 </span></pre></div>
 </div>
 <p>在SW2上使用“display vlan”命令查看VLAN的信息。</p>
@@ -396,9 +396,9 @@
 <h3>Step2：<a class="headerlink" href="#id17" title="永久链接至标题"></a></h3>
 <p>在SW3交换机上的系统视图下使用下列命令进行配置：</p>
 <p>SW3基本配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>vlan <span class="m">3</span> //创建vlan <span class="m">3</span>
-</span><span class="hll"><span class="linenos">2</span>port g0/0/14 //把g0/0/14口放进vlan <span class="m">3</span>
-</span><span class="hll"><span class="linenos">3</span>quit //退出至接口视图
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>vlan<span class="w"> </span><span class="m">3</span><span class="w"> </span>//创建vlan<span class="w"> </span><span class="m">3</span>
+</span><span class="hll"><span class="linenos">2</span>port<span class="w"> </span>g0/0/14<span class="w"> </span>//把g0/0/14口放进vlan<span class="w"> </span><span class="m">3</span>
+</span><span class="hll"><span class="linenos">3</span>quit<span class="w"> </span>//退出至接口视图
 </span></pre></div>
 </div>
 <p>在SW3上使用“display vlan”命令查看VLAN的信息。</p>
@@ -417,11 +417,11 @@
 <p>将SW2与SW3的g0/0/4接口模式配置为trunk，使得所有VLAN都可以通过。
 在SW2和SW3交换机的系统视图下使用下列命令进行配置：</p>
 <p>SW2 和 SW3 基本配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>interface g0/0/4 //进入g0/0/4接口
-</span><span class="hll"><span class="linenos">2</span>undo port default vlan //删除端口下的缺省vlan配置
-</span><span class="hll"><span class="linenos">3</span>port link-type trunk //把端口的连接类型改为trunk模式
-</span><span class="hll"><span class="linenos">4</span>port trunk allow-pass vlan all //Trunk接口模式下允许通过所有vlan
-</span><span class="hll"><span class="linenos">5</span>quit //退出至接口视图
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>interface<span class="w"> </span>g0/0/4<span class="w"> </span>//进入g0/0/4接口
+</span><span class="hll"><span class="linenos">2</span>undo<span class="w"> </span>port<span class="w"> </span>default<span class="w"> </span>vlan<span class="w"> </span>//删除端口下的缺省vlan配置
+</span><span class="hll"><span class="linenos">3</span>port<span class="w"> </span>link-type<span class="w"> </span>trunk<span class="w"> </span>//把端口的连接类型改为trunk模式
+</span><span class="hll"><span class="linenos">4</span>port<span class="w"> </span>trunk<span class="w"> </span>allow-pass<span class="w"> </span>vlan<span class="w"> </span>all<span class="w"> </span>//Trunk接口模式下允许通过所有vlan
+</span><span class="hll"><span class="linenos">5</span>quit<span class="w"> </span>//退出至接口视图
 </span></pre></div>
 </div>
 </section>
@@ -453,13 +453,13 @@
 <img alt="../_images/3-21.jpg" src="../_images/3-21.jpg" />
 <p>在SW2和SW3交换机的系统视图下使用下列命令进行配置：</p>
 <p>SW2 和 SW3 基本配置</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>interface g0/0/4 //进入g0/0/4接口
-</span><span class="hll"><span class="linenos">2</span>undo port link-type //删除端口下的连接类型
-</span><span class="hll"><span class="linenos">3</span>Warning: This <span class="nb">command</span> will delete VLANs on this port. Continue?<span class="o">[</span>Y/N<span class="o">]</span>: //输入Y，删除g0/0/4端口的VLAN配置
-</span><span class="hll"><span class="linenos">4</span>port link-type hybrid //把端口的连接类型改为hybrid模式
-</span><span class="hll"><span class="linenos">5</span>port hybrid pvid vlan <span class="m">1</span> //把g0/0/4的缺省VLAN（pvid）写成1
-</span><span class="hll"><span class="linenos">6</span>port hybrid tagged vlan <span class="m">2</span>  //从g0/0/4发出的vlan2数据帧时带标签
-</span><span class="hll"><span class="linenos">7</span>port hybrid untagged vlan <span class="m">3</span> //从g0/0/4发出的vlan3数据帧时不带标签
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span>interface<span class="w"> </span>g0/0/4<span class="w"> </span>//进入g0/0/4接口
+</span><span class="hll"><span class="linenos">2</span>undo<span class="w"> </span>port<span class="w"> </span>link-type<span class="w"> </span>//删除端口下的连接类型
+</span><span class="hll"><span class="linenos">3</span>Warning:<span class="w"> </span>This<span class="w"> </span><span class="nb">command</span><span class="w"> </span>will<span class="w"> </span>delete<span class="w"> </span>VLANs<span class="w"> </span>on<span class="w"> </span>this<span class="w"> </span>port.<span class="w"> </span>Continue?<span class="o">[</span>Y/N<span class="o">]</span>:<span class="w"> </span>//输入Y，删除g0/0/4端口的VLAN配置
+</span><span class="hll"><span class="linenos">4</span>port<span class="w"> </span>link-type<span class="w"> </span>hybrid<span class="w"> </span>//把端口的连接类型改为hybrid模式
+</span><span class="hll"><span class="linenos">5</span>port<span class="w"> </span>hybrid<span class="w"> </span>pvid<span class="w"> </span>vlan<span class="w"> </span><span class="m">1</span><span class="w"> </span>//把g0/0/4的缺省VLAN（pvid）写成1
+</span><span class="hll"><span class="linenos">6</span>port<span class="w"> </span>hybrid<span class="w"> </span>tagged<span class="w"> </span>vlan<span class="w"> </span><span class="m">2</span><span class="w">  </span>//从g0/0/4发出的vlan2数据帧时带标签
+</span><span class="hll"><span class="linenos">7</span>port<span class="w"> </span>hybrid<span class="w"> </span>untagged<span class="w"> </span>vlan<span class="w"> </span><span class="m">3</span><span class="w"> </span>//从g0/0/4发出的vlan3数据帧时不带标签
 </span></pre></div>
 </div>
 </section>
@@ -487,7 +487,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 

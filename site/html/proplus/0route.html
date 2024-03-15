@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. 组网排错 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/js/baidu-tongji.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="3. ping实现" href="1ping.html" />
+    <link rel="prev" title="1. 组建小型公司局域网" href="0vlan.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">实验</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lab0/index.html">计算机网络实验概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab4/index.html">Lab1：VLAN 与接口模式配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab2/index.html">Lab2：协议栈之Eth协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/index.html">Lab3：协议栈之ARP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab8/index.html">Lab4：RIP路由配置及协议分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab9/index.html">Lab9：邮件客户端的设计与实现</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">附加题</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="0vlan.html">1. 组建小型公司局域网</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. 组网排错</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.1. 实验提交</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1ping.html">3. ping实现</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2IP.html">4. IP重组</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3TCP.html">5. 简易TCP协议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4http.html">6. 搭建Web服务器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5mail.html">7. 邮件客户端的进阶任务</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">附加题</a> &raquo;</li>
+      <li><span class="section-number">2. </span>组网排错</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/proplus/0route.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">2. </span>组网排错<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
+<p>在完成本实验所有实验要求的情况下，实验分加0.5分（不会超过20分满分）。</p>
+<p>在实际操作性配置中，往往会出现人为的疏忽、错误配置等种种问题造成网络不能正常通信。以下给出的网络不能全网互通，请对网络故障进行排查，恢复网络。</p>
+<img alt="../_images/route.JPG" src="../_images/route.JPG" />
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如图所示，PCA 属于 VLAN2， PCB 属于 vlan3。SW1 和 R1 之间使用 rip 协议。 R1 和 R2 之间使用 ospf 协议，其中R1、R2属于Area0，R1和SW1属于Area1，R2和SW3属于Area2。</p>
+<p>在准备实验前，请找实验老师导入设备的预配置！！！</p>
+</div>
+<p>配置OSPF（Open Shortest Path First）协议在路由器上并通过其网络涉及几个步骤。以下是一个基本的配置示例。</p>
+<ol class="arabic simple">
+<li><p>进入系统视图（如果尚未进入）</p></li>
+<li><p>配置OSPF进程并指定路由器ID</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span>ospf<span class="w"> </span><span class="m">1</span><span class="w"> </span>router-id<span class="w"> </span><span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>在这里，ospf 1 是OSPF进程的ID，它是一个在1到65535之间的任意数字。router-id 命令用于设置OSPF路由器的唯一标识符，通常是一个IP地址。在这个例子中，我们使用了192.168.1.1作为路由器ID。</p>
+<ol class="arabic simple" start="3">
+<li><p>创建区域</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span>area<span class="w"> </span><span class="m">0</span>
+</pre></div>
+</div>
+<p>在这个例子中，我们创建了Area 0。</p>
+<ol class="arabic simple" start="4">
+<li><p>配置要通告的网络和区域</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span>network<span class="w"> </span><span class="m">192</span>.168.1.0<span class="w"> </span><span class="m">0</span>.0.0.255
+</pre></div>
+</div>
+<p>这条命令告诉路由器在OSPF区域0中通告192.168.1.0/24网络。network 命令后面的IP地址和掩码应该匹配您要通告的网络。</p>
+<ol class="arabic simple" start="5">
+<li><p>退出系统视图</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<ol class="arabic simple">
+<li><p>ping—测试网络连通性</p></li>
+<li><p>display interface—查看路由器的接口状态</p></li>
+<li><p>display ip interface—查看接口与 IP 相关的信息</p></li>
+<li><p>display ip interface brief—查看接口状态</p></li>
+<li><p>display ip routing-table—查看路由表</p></li>
+<li><p>display vlan—查看 vlan 信息</p></li>
+<li><p>display port vlan—查看端口 vlan 信息</p></li>
+<li><p>display current-configuration —查看运行的配置文件</p></li>
+</ol>
+</div>
+<section id="id2">
+<h2><span class="section-number">2.1. </span>实验提交<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<p>请提交实验报告。</p>
+<p>实验报告需要画出组网图，给出设计方案、操作步骤、配置命令、实验结果及分析。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="0vlan.html" class="btn btn-neutral float-left" title="1. 组建小型公司局域网" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="1ping.html" class="btn btn-neutral float-right" title="3. ping实现" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, qiu.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

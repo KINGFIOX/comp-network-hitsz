@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. 实验目的 &mdash; 计算机网络实验指导书 - 2023春季 | 哈工大（深圳） v1.0 文档</title>
+  <title>1. 实验目的 &mdash; 计算机网络实验指导书 - 2024春季 | 哈工大（深圳） v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/my_style.css" type="text/css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2023春季 | 哈工大（深圳）
+            <a href="../index.html" class="icon icon-home"> 计算机网络实验指导书 - 2024春季 | 哈工大（深圳）
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lab5/index.html">Lab5：协议栈之IP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab6/index.html">Lab6：协议栈之ICMP协议实现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab7/index.html">Lab7：协议栈之UDP协议实现</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab10/index.html">Lab8：NAT组网</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab11/index.html">Lab8：IPv6网络过渡实验</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Lab9：邮件客户端的设计与实现</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. 实验目的</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2. 实验任务</a></li>
@@ -84,11 +84,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-a/index.html">附录 A：Wireshark 入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-b/index.html">附录 B：网络编程实验环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：Cisco Packet Tracer简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-c/index.html">附录 C：网络实验室环境及设备简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（2022）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
 </ul>
 
         </div>
@@ -97,7 +97,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">计算机网络实验指导书 - 2023春季 | 哈工大（深圳）</a>
+          <a href="../index.html">计算机网络实验指导书 - 2024春季 | 哈工大（深圳）</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -168,34 +168,34 @@
 <p>上述命令中，命令名称不区分大小写；&lt;CR&gt;和&lt;LF&gt;分别指回车符（Carriage Return）和换行符（Line Feed），即C语言里面的’r’和’n’。</p>
 </div>
 <p>在用telnet与SMTP服务器（通常是25端口）建立连接后，即可进行会话。以下为一个典型的SMTP会话场景（S代表SMTP服务器，C代表邮件客户端）：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>S: <span class="m">220</span> newxmesmtplogicsvrszc9.qq.com XMail Esmtp QQ Mail Server.
-<span class="linenos"> 2</span>C: EHLO debian
-<span class="linenos"> 3</span>S: <span class="m">250</span>-newxmesmtplogicsvrszc9.qq.com
-<span class="linenos"> 4</span>S: <span class="m">250</span>-PIPELINING
-<span class="linenos"> 5</span>S: <span class="m">250</span>-SIZE <span class="m">73400320</span>
-<span class="linenos"> 6</span>S: STARTTLS
-<span class="linenos"> 7</span>S: AUTH LOGIN PLAIN XOAUTH XOAUTH2
-<span class="linenos"> 8</span>S: <span class="m">250</span>-AUTH<span class="o">=</span>LOGIN
-<span class="linenos"> 9</span>S: <span class="m">250</span>-MAILCOMPRESS
-<span class="linenos">10</span>S: <span class="m">250</span> 8BITMIME
-<span class="linenos">11</span>C: AUTH login
-<span class="linenos">12</span>S: <span class="m">334</span> VXNlcm5hbWU6
-<span class="linenos">13</span>C: blah blah blah <span class="o">(</span>Base64 encoded<span class="o">)</span>
-<span class="linenos">14</span>S: <span class="m">334</span> UGFzc3dvcmQ6
-<span class="linenos">15</span>C: Blah blah blah <span class="o">(</span>Base64 encoded<span class="o">)</span>
-<span class="linenos">16</span>S: Authentication successful
-<span class="linenos">17</span>C: MAIL FROM:&lt;alice@qq.com&gt;
-<span class="linenos">18</span>S: <span class="m">250</span> OK
-<span class="linenos">19</span>C: RCPT TO:&lt;bob@163.com&gt;
-<span class="linenos">20</span>S: <span class="m">250</span> OK
-<span class="linenos">21</span>C: DATA
-<span class="linenos">22</span>S: <span class="m">354</span> End data with &lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;
-<span class="linenos">23</span>C: Blah blah blah...
-<span class="linenos">24</span>C: Blah blah blah...
-<span class="linenos">25</span>C: .
-<span class="linenos">26</span>S: <span class="m">250</span> OK
-<span class="linenos">27</span>C: QUIT
-<span class="linenos">28</span>S: <span class="m">221</span> Bye
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>S:<span class="w"> </span><span class="m">220</span><span class="w"> </span>newxmesmtplogicsvrszc9.qq.com<span class="w"> </span>XMail<span class="w"> </span>Esmtp<span class="w"> </span>QQ<span class="w"> </span>Mail<span class="w"> </span>Server.
+<span class="linenos"> 2</span>C:<span class="w"> </span>EHLO<span class="w"> </span>debian
+<span class="linenos"> 3</span>S:<span class="w"> </span><span class="m">250</span>-newxmesmtplogicsvrszc9.qq.com
+<span class="linenos"> 4</span>S:<span class="w"> </span><span class="m">250</span>-PIPELINING
+<span class="linenos"> 5</span>S:<span class="w"> </span><span class="m">250</span>-SIZE<span class="w"> </span><span class="m">73400320</span>
+<span class="linenos"> 6</span>S:<span class="w"> </span>STARTTLS
+<span class="linenos"> 7</span>S:<span class="w"> </span>AUTH<span class="w"> </span>LOGIN<span class="w"> </span>PLAIN<span class="w"> </span>XOAUTH<span class="w"> </span>XOAUTH2
+<span class="linenos"> 8</span>S:<span class="w"> </span><span class="m">250</span>-AUTH<span class="o">=</span>LOGIN
+<span class="linenos"> 9</span>S:<span class="w"> </span><span class="m">250</span>-MAILCOMPRESS
+<span class="linenos">10</span>S:<span class="w"> </span><span class="m">250</span><span class="w"> </span>8BITMIME
+<span class="linenos">11</span>C:<span class="w"> </span>AUTH<span class="w"> </span>login
+<span class="linenos">12</span>S:<span class="w"> </span><span class="m">334</span><span class="w"> </span>VXNlcm5hbWU6
+<span class="linenos">13</span>C:<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span><span class="o">(</span>Base64<span class="w"> </span>encoded<span class="o">)</span>
+<span class="linenos">14</span>S:<span class="w"> </span><span class="m">334</span><span class="w"> </span>UGFzc3dvcmQ6
+<span class="linenos">15</span>C:<span class="w"> </span>Blah<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span><span class="o">(</span>Base64<span class="w"> </span>encoded<span class="o">)</span>
+<span class="linenos">16</span>S:<span class="w"> </span>Authentication<span class="w"> </span>successful
+<span class="linenos">17</span>C:<span class="w"> </span>MAIL<span class="w"> </span>FROM:&lt;alice@qq.com&gt;
+<span class="linenos">18</span>S:<span class="w"> </span><span class="m">250</span><span class="w"> </span>OK
+<span class="linenos">19</span>C:<span class="w"> </span>RCPT<span class="w"> </span>TO:&lt;bob@163.com&gt;
+<span class="linenos">20</span>S:<span class="w"> </span><span class="m">250</span><span class="w"> </span>OK
+<span class="linenos">21</span>C:<span class="w"> </span>DATA
+<span class="linenos">22</span>S:<span class="w"> </span><span class="m">354</span><span class="w"> </span>End<span class="w"> </span>data<span class="w"> </span>with<span class="w"> </span>&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;
+<span class="linenos">23</span>C:<span class="w"> </span>Blah<span class="w"> </span>blah<span class="w"> </span>blah...
+<span class="linenos">24</span>C:<span class="w"> </span>Blah<span class="w"> </span>blah<span class="w"> </span>blah...
+<span class="linenos">25</span>C:<span class="w"> </span>.
+<span class="linenos">26</span>S:<span class="w"> </span><span class="m">250</span><span class="w"> </span>OK
+<span class="linenos">27</span>C:<span class="w"> </span>QUIT
+<span class="linenos">28</span>S:<span class="w"> </span><span class="m">221</span><span class="w"> </span>Bye
 </pre></div>
 </div>
 <p>可以看出，会话步骤如下：</p>
@@ -238,30 +238,30 @@
 <p>9） <strong>QUIT&lt;CR&gt;&lt;LF&gt;</strong></p>
 <p>结束与POP3服务器的通信。</p>
 <p>同样，我们可以用telnet与POP3服务器（通常是110端口）进行会话。以下为一个典型的POP3会话场景（S代表POP3服务器，C代表邮件客户端）：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>S: +OK Ready.
-<span class="linenos"> 2</span>C: USER alice
-<span class="linenos"> 3</span>S: +OK
-<span class="linenos"> 4</span>C: PASS xxxx
-<span class="linenos"> 5</span>S: +OK Logged <span class="k">in</span>.
-<span class="linenos"> 6</span>C: STAT
-<span class="linenos"> 7</span>S: +OK n m
-<span class="linenos"> 8</span>C: LIST
-<span class="linenos"> 9</span>S: +OK n messages <span class="o">(</span>m octets<span class="o">)</span>
-<span class="linenos">10</span>S: <span class="m">1</span> m1
-<span class="linenos">11</span>S: <span class="m">2</span> m2
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>S:<span class="w"> </span>+OK<span class="w"> </span>Ready.
+<span class="linenos"> 2</span>C:<span class="w"> </span>USER<span class="w"> </span>alice
+<span class="linenos"> 3</span>S:<span class="w"> </span>+OK
+<span class="linenos"> 4</span>C:<span class="w"> </span>PASS<span class="w"> </span>xxxx
+<span class="linenos"> 5</span>S:<span class="w"> </span>+OK<span class="w"> </span>Logged<span class="w"> </span><span class="k">in</span>.
+<span class="linenos"> 6</span>C:<span class="w"> </span>STAT
+<span class="linenos"> 7</span>S:<span class="w"> </span>+OK<span class="w"> </span>n<span class="w"> </span>m
+<span class="linenos"> 8</span>C:<span class="w"> </span>LIST
+<span class="linenos"> 9</span>S:<span class="w"> </span>+OK<span class="w"> </span>n<span class="w"> </span>messages<span class="w"> </span><span class="o">(</span>m<span class="w"> </span>octets<span class="o">)</span>
+<span class="linenos">10</span>S:<span class="w"> </span><span class="m">1</span><span class="w"> </span>m1
+<span class="linenos">11</span>S:<span class="w"> </span><span class="m">2</span><span class="w"> </span>m2
 <span class="linenos">12</span>...
-<span class="linenos">13</span>S: n mn
-<span class="linenos">14</span>C: RETR <span class="m">1</span>
-<span class="linenos">15</span>S: +OK m1 octets
-<span class="linenos">16</span>S: blah blah blah ...
-<span class="linenos">17</span>S: blah blah blah ...
+<span class="linenos">13</span>S:<span class="w"> </span>n<span class="w"> </span>mn
+<span class="linenos">14</span>C:<span class="w"> </span>RETR<span class="w"> </span><span class="m">1</span>
+<span class="linenos">15</span>S:<span class="w"> </span>+OK<span class="w"> </span>m1<span class="w"> </span>octets
+<span class="linenos">16</span>S:<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span>...
+<span class="linenos">17</span>S:<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span>...
 <span class="linenos">18</span>...
-<span class="linenos">19</span>S: blah blah blah
-<span class="linenos">20</span>S: .
-<span class="linenos">21</span>C: DELE <span class="m">1</span>
-<span class="linenos">22</span>S: +OK message <span class="m">1</span> deleted
-<span class="linenos">23</span>C: QUIT
-<span class="linenos">24</span>S: +OK Logging out
+<span class="linenos">19</span>S:<span class="w"> </span>blah<span class="w"> </span>blah<span class="w"> </span>blah
+<span class="linenos">20</span>S:<span class="w"> </span>.
+<span class="linenos">21</span>C:<span class="w"> </span>DELE<span class="w"> </span><span class="m">1</span>
+<span class="linenos">22</span>S:<span class="w"> </span>+OK<span class="w"> </span>message<span class="w"> </span><span class="m">1</span><span class="w"> </span>deleted
+<span class="linenos">23</span>C:<span class="w"> </span>QUIT
+<span class="linenos">24</span>S:<span class="w"> </span>+OK<span class="w"> </span>Logging<span class="w"> </span>out
 </pre></div>
 </div>
 <p>可以看出，会话步骤如下：</p>
@@ -311,12 +311,12 @@
 </tbody>
 </table>
 <p>以下为一个典型的电子邮件内容：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>From: alice@qq.com
-<span class="linenos">2</span>To: bob@163.com
-<span class="linenos">3</span>Message-Id: &lt;<span class="m">0704760941</span>.AA00747@163.com&gt;
-<span class="linenos">4</span>Subject: New Year Greetings
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>From:<span class="w"> </span>alice@qq.com
+<span class="linenos">2</span>To:<span class="w"> </span>bob@163.com
+<span class="linenos">3</span>Message-Id:<span class="w"> </span>&lt;<span class="m">0704760941</span>.AA00747@163.com&gt;
+<span class="linenos">4</span>Subject:<span class="w"> </span>New<span class="w"> </span>Year<span class="w"> </span>Greetings
 <span class="linenos">5</span>
-<span class="linenos">6</span>Happy New Year, Bob!!!
+<span class="linenos">6</span>Happy<span class="w"> </span>New<span class="w"> </span>Year,<span class="w"> </span>Bob!!!
 </pre></div>
 </div>
 <p>该邮件中指定的头部信息有写信人、收信人、邮件标识符和主题。“Happy New Year, Bob!!!”是正文部分。</p>
@@ -407,24 +407,24 @@
 <p>首先是application/octet-stream。尽管MIME规定了许多种格式的消息，但总有一些文件格式无法涵盖。这时，我们可以用application/octet-stream来描述该消息的格式，告诉邮件客户端，这段消息应当复制进一个文件，再打开。后面如何打开，由用户操作。邮件附件可以使用这种子类型表示。</p>
 <p>而message和multipart通常用于构造和操作消息本身。message类型允许一条消息完整地封装在另一个消息中，所以常常被用于邮件回复、转发等。multipart类型允许一条消息含有不同的部分，每个部分含有不同格式的内容。mixed子类型说明消息是由几个部分简单组合而成，每个部分的消息都不同。比如，在发送邮件正文后，如果还想再发送图片或者视频，则应该规定Content-Type为multipart/mixed，再分别将邮件正文和其他文件放在邮件中。与mixed不同，alternative则允许包含多条内容相同但格式不同的消息。例如，HTML消息已经被广泛采用，它可以呈现富文本。但可能有极少数机器不支持HTML消息，只支持最原始的纯文本消息。这时，就可以指定邮件正文的类型为mutipart/alternative，并将HTML消息和纯文本消息都包含在正文中。</p>
 <p>使用multipart的邮件内容通常还需要指定一个边界，用以分隔不同部分内容，如</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>From: alice@qq.com
-<span class="linenos"> 2</span>To: bob@163.com
-<span class="linenos"> 3</span>MIME-Version: <span class="m">1</span>.0
-<span class="linenos"> 4</span>Message-Id: &lt;<span class="m">0704760941</span>.AA00747@163.com&gt;
-<span class="linenos"> 5</span>Content-Type: multipart/mixed<span class="p">;</span> <span class="nv">boundary</span><span class="o">=</span>qwertyuiopasdfghjklzxcvbnm
-<span class="linenos"> 6</span>Subject: Happy Birthday
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>From:<span class="w"> </span>alice@qq.com
+<span class="linenos"> 2</span>To:<span class="w"> </span>bob@163.com
+<span class="linenos"> 3</span>MIME-Version:<span class="w"> </span><span class="m">1</span>.0
+<span class="linenos"> 4</span>Message-Id:<span class="w"> </span>&lt;<span class="m">0704760941</span>.AA00747@163.com&gt;
+<span class="linenos"> 5</span>Content-Type:<span class="w"> </span>multipart/mixed<span class="p">;</span><span class="w"> </span><span class="nv">boundary</span><span class="o">=</span>qwertyuiopasdfghjklzxcvbnm
+<span class="linenos"> 6</span>Subject:<span class="w"> </span>Happy<span class="w"> </span>Birthday
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span>This is the preamble. The user agent ignores it. Have a nice day.
+<span class="linenos"> 8</span>This<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>preamble.<span class="w"> </span>The<span class="w"> </span>user<span class="w"> </span>agent<span class="w"> </span>ignores<span class="w"> </span>it.<span class="w"> </span>Have<span class="w"> </span>a<span class="w"> </span>nice<span class="w"> </span>day.
 <span class="linenos"> 9</span>
 <span class="linenos">10</span>--qwertyuiopasdfghjklzxcvbnm
-<span class="linenos">11</span>Content-Type: xxx
-<span class="linenos">12</span>… <span class="o">(</span>Some other headers<span class="o">)</span>
+<span class="linenos">11</span>Content-Type:<span class="w"> </span>xxx
+<span class="linenos">12</span>…<span class="w"> </span><span class="o">(</span>Some<span class="w"> </span>other<span class="w"> </span>headers<span class="o">)</span>
 <span class="linenos">13</span>
 <span class="linenos">14</span>xxx
 <span class="linenos">15</span>
 <span class="linenos">16</span>--qwertyuiopasdfghjklzxcvbnm
-<span class="linenos">17</span>Content-Type: xxx
-<span class="linenos">18</span>… <span class="o">(</span>Some other headers<span class="o">)</span>
+<span class="linenos">17</span>Content-Type:<span class="w"> </span>xxx
+<span class="linenos">18</span>…<span class="w"> </span><span class="o">(</span>Some<span class="w"> </span>other<span class="w"> </span>headers<span class="o">)</span>
 <span class="linenos">19</span>
 <span class="linenos">20</span>xxx
 <span class="linenos">21</span>
@@ -455,13 +455,8 @@
 <img alt="../_images/lab-3.png" src="../_images/lab-3.png" />
 <img alt="../_images/lab-1.png" src="../_images/lab-1.png" />
 <p>在telnet与SMTP交互过程中，你需要提前准备好 <strong>base64编码的邮件用户名和邮件授权码</strong> 。获取一个字符串的base64编码的方法为：打开Linux系统的命令行，输入如下命令</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span><span class="nb">printf</span> <span class="s2">&quot;username&quot;</span> <span class="p">|</span> openssl base64
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>base64
 </pre></div>
-</div>
-<div class="admonition attention">
-<p class="admonition-title">注意</p>
-<p><strong>不要使用OS实验的远程实验平台来做计算机网络实验</strong> ，远程实验平台能够使用telnet命令，也能够编译运行本次实验的代码，但不能使用wireshark来捕获报文，使得实验难以调试。</p>
-<p>建议使用你自己电脑中的Linux系统（可以是虚拟机），也可以使用实验室电脑的Linux系统来完成实验。</p>
 </div>
 </section>
 <section id="wiresharksmtp">
@@ -669,7 +664,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2023, qiu.</p>
+    <p>&#169; 版权所有 2024, qiu.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
