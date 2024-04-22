@@ -119,7 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题</a></li>
 </ul>
 
         </div>
@@ -282,7 +282,7 @@
 <section id="step2">
 <h3><span class="section-number">6.1.2. </span>Step2：<a class="headerlink" href="#step2" title="永久链接至标题"></a></h3>
 <p>在弹出的窗口中，输入需通过telnet访问的设备IP（见表 <span class="xref std std-ref">ATM管理机地址表1</span> ）和端口号，然后点击“连接”即可。（SW2的port为3004，SW3的port为3005）如图所示：</p>
-<span id="atm"></span><table class="colwidths-given docutils align-center" id="id26">
+<table class="colwidths-given docutils align-center" id="id26">
 <caption><span class="caption-text">ATM管理机地址表1</span><a class="headerlink" href="#id26" title="永久链接至表格"></a></caption>
 <colgroup>
 <col style="width: 40%" />
@@ -416,7 +416,11 @@
 </section>
 <section id="ip">
 <h2><span class="section-number">6.4. </span>配置计算机IP地址<a class="headerlink" href="#ip" title="永久链接至标题"></a></h2>
-<p>配置各台计算机的IP地址。打开“控制面板” -&gt; “网络和Internet” -&gt; “查看网络状态和任务” -&gt; “更改适配器设置”。在“本地连接”上点击右键，选择“启用”。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>实验室电脑上有两个有线网卡，我们需要配置的是第二块网卡，即“以太网2”。请不要改动第二块网卡“以太网”的配置，否则，电脑极有可能上不了网。</p>
+</div>
+<p>配置各台计算机的IP地址。打开“控制面板” -&gt; “网络和Internet” -&gt; “查看网络状态和任务” -&gt; “更改适配器设置”。在“以太网2”上点击右键，选择“启用”。</p>
 <img alt="../_images/3-7.jpg" src="../_images/3-7.jpg" />
 <img alt="../_images/3-8.jpg" src="../_images/3-8.jpg" />
 <p>点击“属性”。</p>
