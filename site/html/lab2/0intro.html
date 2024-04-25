@@ -70,11 +70,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id16">5. 实验提交</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id17">5.1. 实验设计报告</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id18">5.2. 实验代码</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../lab3/index.html">Lab3：协议栈之ARP协议实现</a></li>
@@ -94,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../appendix-d/index.html">附录 D：邮件客户端实验环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-e/index.html">附录 E：参考文献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix-f/index.html">附录 F：致谢</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题（往届问题）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix-g/index.html">常见问题</a></li>
 </ul>
 
         </div>
@@ -179,8 +174,8 @@
 <h3><span class="section-number">3.1.2. </span>网络数据包大端与小端<a class="headerlink" href="#id6" title="永久链接至标题"></a></h3>
 <p>经过大学前两年的学习，同学们对大端和小端字节序的概念及其由来应该已经有了深入的理解。这两种字节序在数据存储时呈现出明显的差异。在小端字节序中，最低有效字节被存储在内存的低地址处，而最高有效字节则被存储在内存的高地址处。相反，在大端字节序中，最高有效字节被存储在内存的低地址处，而最低有效字节则被存储在内存的高地址处。这两种字节序对于跨平台或跨网络的数据传输和解析至关重要，因此，在实际应用中需要特别注意。</p>
 <p>以long型数据0x12345678为例，其在小端字节序和大端字节序下的存储方式如下：</p>
-<table class="colwidths-given docutils align-center" id="id19">
-<caption><span class="caption-text">小端字节序</span><a class="headerlink" href="#id19" title="永久链接至表格"></a></caption>
+<table class="colwidths-given docutils align-center" id="id16">
+<caption><span class="caption-text">小端字节序</span><a class="headerlink" href="#id16" title="永久链接至表格"></a></caption>
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 60%" />
@@ -205,8 +200,8 @@
 </tr>
 </tbody>
 </table>
-<span id="id8"></span><table class="colwidths-given docutils align-center" id="id20">
-<caption><span class="caption-text">大端字节序</span><a class="headerlink" href="#id20" title="永久链接至表格"></a></caption>
+<span id="id8"></span><table class="colwidths-given docutils align-center" id="id17">
+<caption><span class="caption-text">大端字节序</span><a class="headerlink" href="#id17" title="永久链接至表格"></a></caption>
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 60%" />
@@ -424,19 +419,6 @@
 <h3><span class="section-number">4.3.3. </span>GDB调试<a class="headerlink" href="#gdb" title="永久链接至标题"></a></h3>
 <p>本实验支持使用GDB调试，请参考 <a class="reference internal" href="../appendix-b/1win.html"><span class="doc">Windows开发环境搭建</span></a> 中的“Windows下编译和调试”</p>
 </section>
-</section>
-</section>
-<section id="id16">
-<h1><span class="section-number">5. </span>实验提交<a class="headerlink" href="#id16" title="永久链接至标题"></a></h1>
-<p>本实验提交 <strong>实验设计报告</strong> 和 <strong>实验代码</strong> 。</p>
-<section id="id17">
-<h2><span class="section-number">5.1. </span>实验设计报告<a class="headerlink" href="#id17" title="永久链接至标题"></a></h2>
-<p>实验设计报告要求写出实验设计思路和运行结果 。</p>
-<p>实验设计报告会纳入评分（虽然不多），有分数追求的大佬（juanwang）们不要只放代码和指导书的截图。</p>
-</section>
-<section id="id18">
-<h2><span class="section-number">5.2. </span>实验代码<a class="headerlink" href="#id18" title="永久链接至标题"></a></h2>
-<p>不需要提交整个实验代码包，只需 <strong>提交你所修改过的代码</strong> 即可。</p>
 </section>
 </section>
 
